@@ -31,6 +31,18 @@ h1 { color: #ffd700; }
   background: #181818;
   border-radius: 8px;
 }
+button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #ffcc33;
+}
 a { color: #00aaff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 </style>
@@ -39,22 +51,35 @@ function toggleDrawer(id) {
   var e = document.getElementById(id);
   e.style.display = (e.style.display === 'block') ? 'none' : 'block';
 }
+function expandAll(state) {
+  var contents = document.getElementsByClassName('drawer-content');
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = state ? 'block' : 'none';
+  }
+}
 </script>
 </head>
 <body>
 <h1>Destiny 2 Activities — Titan</h1>
-<p><a href="hunter.html">Hunter</a> | <a href="titan.html">Titan</a> | <a href="warlock.html">Warlock</a></p>
+<p>
+  <a href="hunter.html">Hunter</a> | 
+  <a href="titan.html">Titan</a> | 
+  <a href="warlock.html">Warlock</a>
+</p>
+<p>
+  <button onclick="expandAll(true)">Expand All</button>
+  <button onclick="expandAll(false)">Collapse All</button>
+</p>
 
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer0')">
-            11/01/2025 — Showdown
+            11/01/2025 — Battleground: Delve: Customize
           </div>
           <div class="drawer-content" id="drawer0">
-            <p><b>Duration:</b> 9m 53s</p>
-            <p><b>K/D/A:</b> 16/2/3</p>
-            <p><b>Weapons:</b> Graviton Spike, The Slammer (Adept), Deadlock</p>
-            <p><b>Result:</b> Victory</p>
-            <p><i>PGCR ID:</i> 16609671161</p>
+            <p><b>Duration:</b> 40m 58s</p>
+            <p><b>K/D/A:</b> 422/7/0 (<b>K/D:</b> 60.29)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> The Riposte, Mint Retrograde, Whisper of the Worm</p>
           </div>
         </div>
         
@@ -63,115 +88,382 @@ function toggleDrawer(id) {
             11/01/2025 — Battleground: Delve: Customize
           </div>
           <div class="drawer-content" id="drawer1">
-            <p><b>Duration:</b> 26m 30s</p>
-            <p><b>K/D/A:</b> 263/6/0</p>
-            <p><b>Weapons:</b> Prosecutor, Mint Retrograde, Whisper of the Worm</p>
-            <p><b>Result:</b> Failed</p>
-            <p><i>PGCR ID:</i> 16609609632</p>
+            <p><b>Duration:</b> 2m 12s</p>
+            <p><b>K/D/A:</b> 16/0/0 (<b>K/D:</b> 16)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> The Riposte, Whisper of the Worm, Mint Retrograde</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer2')">
-            11/01/2025 — Battleground: Behemoth: Customize
+            11/01/2025 — Showdown
           </div>
           <div class="drawer-content" id="drawer2">
-            <p><b>Duration:</b> 32m 26s</p>
-            <p><b>K/D/A:</b> 344/9/0</p>
-            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Submersion</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16609583737</p>
+            <p><b>Duration:</b> 9m 53s</p>
+            <p><b>K/D/A:</b> 16/2/3 (<b>K/D:</b> 8.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, The Slammer (Adept), Deadlock</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer3')">
-            11/01/2025 — Battleground: Behemoth: Customize
+            11/01/2025 — Battleground: Delve: Customize
           </div>
           <div class="drawer-content" id="drawer3">
-            <p><b>Duration:</b> 0m 42s</p>
-            <p><b>K/D/A:</b> 0/0/0</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-            <p><b>Result:</b> Failed</p>
-            <p><i>PGCR ID:</i> 16609561692</p>
+            <p><b>Duration:</b> 26m 30s</p>
+            <p><b>K/D/A:</b> 263/6/0 (<b>K/D:</b> 43.83)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Prosecutor, Mint Retrograde, Whisper of the Worm</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer4')">
-            11/01/2025 — Fallen S.A.B.E.R.: Matchmade
+            11/01/2025 — Battleground: Behemoth: Customize
           </div>
           <div class="drawer-content" id="drawer4">
-            <p><b>Duration:</b> 12m 16s</p>
-            <p><b>K/D/A:</b> 86/0/22</p>
-            <p><b>Weapons:</b> Graviton Spike, Submersion, Deadlock</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16609560103</p>
+            <p><b>Duration:</b> 32m 26s</p>
+            <p><b>K/D/A:</b> 344/9/0 (<b>K/D:</b> 38.22)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Submersion</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer5')">
-            11/01/2025 — Cabal's Watch: Matchmade
+            11/01/2025 — Battleground: Behemoth: Customize
           </div>
           <div class="drawer-content" id="drawer5">
-            <p><b>Duration:</b> 16m 1s</p>
-            <p><b>K/D/A:</b> 161/1/17</p>
-            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, The Slammer (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16609441137</p>
+            <p><b>Duration:</b> 0m 42s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer6')">
-            10/29/2025 — Fallen Bunker: Customize
+            11/01/2025 — Fallen S.A.B.E.R.: Matchmade
           </div>
           <div class="drawer-content" id="drawer6">
-            <p><b>Duration:</b> 51m 29s</p>
-            <p><b>K/D/A:</b> 359/14/6</p>
-            <p><b>Weapons:</b> Graviton Spike, Tinasha's Mastery, Submersion</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16607568750</p>
+            <p><b>Duration:</b> 12m 16s</p>
+            <p><b>K/D/A:</b> 86/0/22 (<b>K/D:</b> 86)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, Submersion, Deadlock</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer7')">
-            10/29/2025 — Conductor's Keep: Customize
+            11/01/2025 — Cabal's Watch: Matchmade
           </div>
           <div class="drawer-content" id="drawer7">
-            <p><b>Duration:</b> 15m 27s</p>
-            <p><b>K/D/A:</b> 140/2/47</p>
-            <p><b>Weapons:</b> Graviton Spike, Synanceia, Tinasha's Mastery</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16607443897</p>
+            <p><b>Duration:</b> 16m 1s</p>
+            <p><b>K/D/A:</b> 161/1/17 (<b>K/D:</b> 161.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, The Slammer (Adept)</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer8')">
-            10/29/2025 — Cabal's Watch: Customize
+            10/29/2025 — Fallen Bunker: Customize
           </div>
           <div class="drawer-content" id="drawer8">
-            <p><b>Duration:</b> 15m 46s</p>
-            <p><b>K/D/A:</b> 99/2/34</p>
-            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Submersion</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16607417000</p>
+            <p><b>Duration:</b> 51m 29s</p>
+            <p><b>K/D/A:</b> 359/14/6 (<b>K/D:</b> 25.64)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, Tinasha's Mastery, Submersion</p>
           </div>
         </div>
         
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer9')">
-            10/29/2025 — Battleground: Foothold: Customize
+            10/29/2025 — Conductor's Keep: Customize
           </div>
           <div class="drawer-content" id="drawer9">
-            <p><b>Duration:</b> 14m 10s</p>
-            <p><b>K/D/A:</b> 146/4/47</p>
+            <p><b>Duration:</b> 15m 27s</p>
+            <p><b>K/D/A:</b> 140/2/47 (<b>K/D:</b> 70.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, Synanceia, Tinasha's Mastery</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer10')">
+            10/29/2025 — Cabal's Watch: Customize
+          </div>
+          <div class="drawer-content" id="drawer10">
+            <p><b>Duration:</b> 15m 46s</p>
+            <p><b>K/D/A:</b> 99/2/34 (<b>K/D:</b> 49.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Submersion</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16607389028</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer11')">
+            10/29/2025 — Battleground: Foothold: Customize
+          </div>
+          <div class="drawer-content" id="drawer11">
+            <p><b>Duration:</b> 14m 10s</p>
+            <p><b>K/D/A:</b> 146/4/47 (<b>K/D:</b> 36.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Submersion</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer12')">
+            10/29/2025 — Cabal's Watch: Customize
+          </div>
+          <div class="drawer-content" id="drawer12">
+            <p><b>Duration:</b> 15m 48s</p>
+            <p><b>K/D/A:</b> 97/3/30 (<b>K/D:</b> 32.33)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tinasha's Mastery, Graviton Spike, Synanceia</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer13')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer13">
+            <p><b>Duration:</b> 28m 15s</p>
+            <p><b>K/D/A:</b> 239/4/28 (<b>K/D:</b> 59.75)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, The Other Half, Deadlock</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer14')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer14">
+            <p><b>Duration:</b> 26m 30s</p>
+            <p><b>K/D/A:</b> 168/4/41 (<b>K/D:</b> 42.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, The Other Half, Deadlock</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer15')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer15">
+            <p><b>Duration:</b> 15m 16s</p>
+            <p><b>K/D/A:</b> 69/4/13 (<b>K/D:</b> 17.25)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Graviton Spike, The Slammer (Adept), Deadlock</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer16')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer16">
+            <p><b>Duration:</b> 12m 43s</p>
+            <p><b>K/D/A:</b> 81/2/2 (<b>K/D:</b> 40.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, Deadlock, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer17')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer17">
+            <p><b>Duration:</b> 13m 24s</p>
+            <p><b>K/D/A:</b> 31/1/7 (<b>K/D:</b> 31.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Graviton Spike, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer18')">
+            10/29/2025 — Nightmare of Gahlran: Customize
+          </div>
+          <div class="drawer-content" id="drawer18">
+            <p><b>Duration:</b> 9m 2s</p>
+            <p><b>K/D/A:</b> 34/0/0 (<b>K/D:</b> 34)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Jurisprudent, Graviton Spike, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer19')">
+            10/29/2025 — Haunted Altars of Sorrow: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer19">
+            <p><b>Duration:</b> 17m 28s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer20')">
+            10/29/2025 — Haunted Altars of Sorrow: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer20">
+            <p><b>Duration:</b> 14m 32s</p>
+            <p><b>K/D/A:</b> 108/1/24 (<b>K/D:</b> 108.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Trinity Ghoul, Tinasha's Mastery, Synanceia</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer21')">
+            10/29/2025 — Haunted Altars of Sorrow: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer21">
+            <p><b>Duration:</b> 16m 50s</p>
+            <p><b>K/D/A:</b> 163/3/50 (<b>K/D:</b> 54.33)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tommy's Matchbook, Ulterior Observation, Mint Retrograde</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer22')">
+            10/28/2025 — Grandmaster Conquest: Fallen S.A.B.E.R.: Customize
+          </div>
+          <div class="drawer-content" id="drawer22">
+            <p><b>Duration:</b> 19m 49s</p>
+            <p><b>K/D/A:</b> 78/2/76 (<b>K/D:</b> 39.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Unfall, Wicked Implement, Submersion</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer23')">
+            10/27/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer23">
+            <p><b>Duration:</b> 25m 43s</p>
+            <p><b>K/D/A:</b> 192/2/88 (<b>K/D:</b> 96.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Submersion, Buried Bloodline, Seraphine Haze</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer24')">
+            10/27/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer24">
+            <p><b>Duration:</b> 3m 49s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer25')">
+            10/27/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer25">
+            <p><b>Duration:</b> 10m 23s</p>
+            <p><b>K/D/A:</b> 95/3/32 (<b>K/D:</b> 31.67)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Submersion, Seraphine Haze, Buried Bloodline</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer26')">
+            10/26/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer26">
+            <p><b>Duration:</b> 31m 8s</p>
+            <p><b>K/D/A:</b> 170/4/106 (<b>K/D:</b> 42.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Buried Bloodline, Submersion, Seraphine Haze</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer27')">
+            10/26/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer27">
+            <p><b>Duration:</b> 14m 19s</p>
+            <p><b>K/D/A:</b> 108/3/39 (<b>K/D:</b> 36.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Buried Bloodline, Seraphine Haze, Submersion</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer28')">
+            10/26/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer28">
+            <p><b>Duration:</b> 29m 24s</p>
+            <p><b>K/D/A:</b> 234/4/101 (<b>K/D:</b> 58.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Submersion, Buried Bloodline, Seraphine Haze</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer29')">
+            10/26/2025 — //node.ovrd.AVALON//: Customize
+          </div>
+          <div class="drawer-content" id="drawer29">
+            <p><b>Duration:</b> 22m 34s</p>
+            <p><b>K/D/A:</b> 153/5/38 (<b>K/D:</b> 30.6)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Submersion, Buried Bloodline, Seraphine Haze</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer30')">
+            10/26/2025 — The Devils' Lair: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer30">
+            <p><b>Duration:</b> 14m 32s</p>
+            <p><b>K/D/A:</b> 119/5/47 (<b>K/D:</b> 23.8)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Lethal Abundance, Tommy's Matchbook, Ulterior Observation</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer31')">
+            10/26/2025 — Conductor's Keep: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer31">
+            <p><b>Duration:</b> 27m 53s</p>
+            <p><b>K/D/A:</b> 179/6/51 (<b>K/D:</b> 29.83)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> The Slammer (Adept), Seraphine Haze, Buried Bloodline</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer32')">
+            10/26/2025 — Fallen Bunker: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer32">
+            <p><b>Duration:</b> 39m 0s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
           </div>
         </div>
         

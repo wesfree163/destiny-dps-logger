@@ -31,6 +31,18 @@ h1 { color: #ffd700; }
   background: #181818;
   border-radius: 8px;
 }
+button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #ffcc33;
+}
 a { color: #00aaff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 </style>
@@ -39,11 +51,25 @@ function toggleDrawer(id) {
   var e = document.getElementById(id);
   e.style.display = (e.style.display === 'block') ? 'none' : 'block';
 }
+function expandAll(state) {
+  var contents = document.getElementsByClassName('drawer-content');
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = state ? 'block' : 'none';
+  }
+}
 </script>
 </head>
 <body>
 <h1>Destiny 2 Activities — Hunter</h1>
-<p><a href="hunter.html">Hunter</a> | <a href="titan.html">Titan</a> | <a href="warlock.html">Warlock</a></p>
+<p>
+  <a href="hunter.html">Hunter</a> | 
+  <a href="titan.html">Titan</a> | 
+  <a href="warlock.html">Warlock</a>
+</p>
+<p>
+  <button onclick="expandAll(true)">Expand All</button>
+  <button onclick="expandAll(false)">Collapse All</button>
+</p>
 
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer0')">
@@ -51,10 +77,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer0">
             <p><b>Duration:</b> 26m 55s</p>
-            <p><b>K/D/A:</b> 185/3/48</p>
+            <p><b>K/D/A:</b> 185/3/48 (<b>K/D:</b> 61.67)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Tinasha's Mastery, Hierarchy of Needs, The Slammer (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608753575</p>
           </div>
         </div>
         
@@ -64,10 +89,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer1">
             <p><b>Duration:</b> 21m 23s</p>
-            <p><b>K/D/A:</b> 91/1/70</p>
+            <p><b>K/D/A:</b> 91/1/70 (<b>K/D:</b> 91.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Tinasha's Mastery, Hierarchy of Needs, The Slammer (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608737829</p>
           </div>
         </div>
         
@@ -77,10 +101,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer2">
             <p><b>Duration:</b> 11m 26s</p>
-            <p><b>K/D/A:</b> 12/3/0</p>
+            <p><b>K/D/A:</b> 12/3/0 (<b>K/D:</b> 4.0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
             <p><b>Weapons:</b> Typhon GL5, Unknown, Unknown</p>
-            <p><b>Result:</b> Failed</p>
-            <p><i>PGCR ID:</i> 16608611476</p>
           </div>
         </div>
         
@@ -90,10 +113,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer3">
             <p><b>Duration:</b> 15m 5s</p>
-            <p><b>K/D/A:</b> 28/6/0</p>
+            <p><b>K/D/A:</b> 28/6/0 (<b>K/D:</b> 4.67)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
             <p><b>Weapons:</b> Typhon GL5, Witherhoard, Unknown</p>
-            <p><b>Result:</b> Failed</p>
-            <p><i>PGCR ID:</i> 16608603550</p>
           </div>
         </div>
         
@@ -103,10 +125,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer4">
             <p><b>Duration:</b> 8m 36s</p>
-            <p><b>K/D/A:</b> 58/3/21</p>
+            <p><b>K/D/A:</b> 58/3/21 (<b>K/D:</b> 19.33)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Adamantite, Still Hunt, Cold Comfort (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608552220</p>
           </div>
         </div>
         
@@ -116,10 +137,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer5">
             <p><b>Duration:</b> 20m 20s</p>
-            <p><b>K/D/A:</b> 159/7/56</p>
+            <p><b>K/D/A:</b> 159/7/56 (<b>K/D:</b> 22.71)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Gunburn, Still Hunt, Cold Comfort (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608531543</p>
           </div>
         </div>
         
@@ -129,10 +149,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer6">
             <p><b>Duration:</b> 8m 12s</p>
-            <p><b>K/D/A:</b> 18/17/7</p>
+            <p><b>K/D/A:</b> 18/17/7 (<b>K/D:</b> 1.06)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Sturm, Drang, Play of the Game</p>
-            <p><b>Result:</b> Defeat</p>
-            <p><i>PGCR ID:</i> 16608464738</p>
           </div>
         </div>
         
@@ -142,10 +161,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer7">
             <p><b>Duration:</b> 8m 0s</p>
-            <p><b>K/D/A:</b> 75/0/0</p>
+            <p><b>K/D/A:</b> 75/0/0 (<b>K/D:</b> 75)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Hierarchy of Needs, Tinasha's Mastery, Unknown</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608223127</p>
           </div>
         </div>
         
@@ -155,10 +173,9 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer8">
             <p><b>Duration:</b> 8m 11s</p>
-            <p><b>K/D/A:</b> 102/0/0</p>
+            <p><b>K/D/A:</b> 102/0/0 (<b>K/D:</b> 102)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> The Slammer (Adept), Solemn Remembrance, Eriana's Vow, Hierarchy of Needs, Tinasha's Mastery, Submersion</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608216397</p>
           </div>
         </div>
         
@@ -168,10 +185,249 @@ function toggleDrawer(id) {
           </div>
           <div class="drawer-content" id="drawer9">
             <p><b>Duration:</b> 14m 4s</p>
-            <p><b>K/D/A:</b> 102/0/0</p>
+            <p><b>K/D/A:</b> 102/0/0 (<b>K/D:</b> 102)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
             <p><b>Weapons:</b> Solemn Remembrance, Eriana's Vow, The Slammer (Adept)</p>
-            <p><b>Result:</b> Completed</p>
-            <p><i>PGCR ID:</i> 16608206488</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer10')">
+            10/30/2025 — The Salt Mines: Customize
+          </div>
+          <div class="drawer-content" id="drawer10">
+            <p><b>Duration:</b> 3m 6s</p>
+            <p><b>K/D/A:</b> 16/0/0 (<b>K/D:</b> 16)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Eriana's Vow, Solemn Remembrance, Submersion</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer11')">
+            10/30/2025 — Cabal's Watch: Customize
+          </div>
+          <div class="drawer-content" id="drawer11">
+            <p><b>Duration:</b> 37m 7s</p>
+            <p><b>K/D/A:</b> 295/3/16 (<b>K/D:</b> 98.33)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Tinasha's Mastery, Hierarchy of Needs, Submersion</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer12')">
+            10/30/2025 — Cabal's Watch: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer12">
+            <p><b>Duration:</b> 18m 0s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer13')">
+            10/30/2025 — Grasp of Avarice: Standard
+          </div>
+          <div class="drawer-content" id="drawer13">
+            <p><b>Duration:</b> 11m 6s</p>
+            <p><b>K/D/A:</b> 228/1/0 (<b>K/D:</b> 228.0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Hierarchy of Needs, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer14')">
+            10/30/2025 — Grasp of Avarice: Standard
+          </div>
+          <div class="drawer-content" id="drawer14">
+            <p><b>Duration:</b> 21m 52s</p>
+            <p><b>K/D/A:</b> 487/1/0 (<b>K/D:</b> 487.0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Hierarchy of Needs, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer15')">
+            10/30/2025 — Spire of the Watcher: Master
+          </div>
+          <div class="drawer-content" id="drawer15">
+            <p><b>Duration:</b> 52m 53s</p>
+            <p><b>K/D/A:</b> 258/4/53 (<b>K/D:</b> 64.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Gunburn, Choir of One, The Slammer (Adept), Mirror Imago, Still Hunt, The Riposte, Succession</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer16')">
+            10/29/2025 — World Tier: Mythic
+          </div>
+          <div class="drawer-content" id="drawer16">
+            <p><b>Duration:</b> 1m 51s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer17')">
+            10/29/2025 — Mythic Mission: The Invitation
+          </div>
+          <div class="drawer-content" id="drawer17">
+            <p><b>Duration:</b> 37m 33s</p>
+            <p><b>K/D/A:</b> 176/6/63 (<b>K/D:</b> 29.33)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Choir of One, Mercury-A, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer18')">
+            10/28/2025 — Battleground: Delve: Customize
+          </div>
+          <div class="drawer-content" id="drawer18">
+            <p><b>Duration:</b> 14m 51s</p>
+            <p><b>K/D/A:</b> 79/1/98 (<b>K/D:</b> 79.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Mercury-A, Graviton Spike, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer19')">
+            10/28/2025 — Battleground: Delve: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer19">
+            <p><b>Duration:</b> 17m 12s</p>
+            <p><b>K/D/A:</b> 182/1/103 (<b>K/D:</b> 182.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Mercury-A, Graviton Spike, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer20')">
+            10/28/2025 — Expedition: Nessus: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer20">
+            <p><b>Duration:</b> 30m 39s</p>
+            <p><b>K/D/A:</b> 77/3/37 (<b>K/D:</b> 25.67)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Mercury-A, The Slammer (Adept), Graviton Spike</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer21')">
+            10/27/2025 — The Coil: Customize
+          </div>
+          <div class="drawer-content" id="drawer21">
+            <p><b>Duration:</b> 27m 25s</p>
+            <p><b>K/D/A:</b> 130/1/112 (<b>K/D:</b> 130.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Mercury-A, Graviton Spike, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer22')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer22">
+            <p><b>Duration:</b> 15m 43s</p>
+            <p><b>K/D/A:</b> 227/2/44 (<b>K/D:</b> 113.5)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Bygones, Choir of One, Cold Comfort (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer23')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer23">
+            <p><b>Duration:</b> 9m 32s</p>
+            <p><b>K/D/A:</b> 66/3/32 (<b>K/D:</b> 22.0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Choir of One, Bygones, Cold Comfort (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer24')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer24">
+            <p><b>Duration:</b> 3m 42s</p>
+            <p><b>K/D/A:</b> 40/0/5 (<b>K/D:</b> 40)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Bygones, Choir of One, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer25')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer25">
+            <p><b>Duration:</b> 14m 24s</p>
+            <p><b>K/D/A:</b> 143/3/29 (<b>K/D:</b> 47.67)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Choir of One, Mercury-A, Cold Comfort (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer26')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer26">
+            <p><b>Duration:</b> 10m 55s</p>
+            <p><b>K/D/A:</b> 120/2/20 (<b>K/D:</b> 60.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Choir of One, Mercury-A, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer27')">
+            10/27/2025 — Hefnd's Vengeance: Customize
+          </div>
+          <div class="drawer-content" id="drawer27">
+            <p><b>Duration:</b> 6m 20s</p>
+            <p><b>K/D/A:</b> 65/1/14 (<b>K/D:</b> 65.0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Choir of One, Mercury-A, Unknown</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer28')">
+            10/27/2025 — Haunted Altars of Sorrow: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer28">
+            <p><b>Duration:</b> 17m 52s</p>
+            <p><b>K/D/A:</b> 204/4/78 (<b>K/D:</b> 51.0)</p>
+            <p><b>Outcome:</b> Win/Completed</p>
+            <p><b>Weapons:</b> Festival Flight, Graviton Spike, The Slammer (Adept)</p>
+          </div>
+        </div>
+        
+        <div class="drawer">
+          <div class="drawer-header" onclick="toggleDrawer('drawer29')">
+            10/27/2025 — Haunted Altars of Sorrow: Matchmade
+          </div>
+          <div class="drawer-content" id="drawer29">
+            <p><b>Duration:</b> 2m 25s</p>
+            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
+            <p><b>Outcome:</b> Loss/Failed</p>
+            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
           </div>
         </div>
         
