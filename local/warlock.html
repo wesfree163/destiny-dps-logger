@@ -2,49 +2,115 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Warlock</title>
 <style>
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0e0e0e;
-  color: #eaeaea;
-  padding: 2rem;
+  color: #f5f5f5;
+  padding: 1.5rem;
+  margin: 0;
 }
-h1 { color: #ffd700; }
+
+h1 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar a {
+  background-color: #222;
+  color: #ffd700;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #ffcc33;
+  color: #000;
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.3rem;
+  width: 48%;
+}
+
+button:hover {
+  background-color: #ffcc33;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 .drawer {
   background: #1c1c1c;
-  border-radius: 10px;
+  border-radius: 12px;
   margin: 1em 0;
   padding: 1em;
   box-shadow: 0 0 10px #000;
 }
+
 .drawer-header {
   cursor: pointer;
-  padding: 0.5em;
+  padding: 0.8em;
   background: #222;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 1.1rem;
 }
+
 .drawer-content {
   display: none;
   padding: 1em;
   background: #181818;
   border-radius: 8px;
+  font-size: 1.05rem;
 }
-button {
-  background-color: #ffd700;
-  color: #000;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 1.05rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .drawer-header {
+    font-size: 1rem;
+  }
+  .drawer-content {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
+  }
 }
-button:hover {
-  background-color: #ffcc33;
-}
-a { color: #00aaff; text-decoration: none; }
-a:hover { text-decoration: underline; }
 </style>
 <script>
 function toggleDrawer(id) {
@@ -61,15 +127,15 @@ function expandAll(state) {
 </head>
 <body>
 <h1>Destiny 2 Activities — Warlock</h1>
-<p>
-  <a href="hunter.html">Hunter</a> | 
-  <a href="titan.html">Titan</a> | 
+<div class="navbar">
+  <a href="hunter.html">Hunter</a>
+  <a href="titan.html">Titan</a>
   <a href="warlock.html">Warlock</a>
-</p>
-<p>
+</div>
+<div class="controls">
   <button onclick="expandAll(true)">Expand All</button>
   <button onclick="expandAll(false)">Collapse All</button>
-</p>
+</div>
 
         <div class="drawer">
           <div class="drawer-header" onclick="toggleDrawer('drawer0')">
