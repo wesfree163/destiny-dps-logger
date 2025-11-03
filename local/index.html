@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Destiny Activity Log</title>
     <style>
         body {
@@ -14,40 +15,51 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
+            padding: 1rem;
         }
 
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 0.8rem;
             color: #00aaff;
         }
 
         p.subtitle {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
             color: #cccccc;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .card-container {
             display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
+            gap: 1rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            width: 100%;
+            scrollbar-width: none;
+        }
+
+        .card-container::-webkit-scrollbar {
+            display: none;
         }
 
         .card {
+            flex: 0 0 auto;
             background: #1c1c1c;
             border-radius: 12px;
-            padding: 2rem 3rem;
-            min-width: 180px;
+            padding: 1.8rem 2.2rem;
+            min-width: 140px;
             cursor: pointer;
             transition: all 0.25s ease-in-out;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
             text-decoration: none;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 500;
             border: 1px solid transparent;
         }
@@ -59,10 +71,32 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: 15px;
+            margin-top: 2rem;
             font-size: 0.9rem;
             color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                font-size: 1.1rem;
+                padding: 1.5rem 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            p.subtitle {
+                font-size: 1rem;
+            }
+
+            .card {
+                min-width: 120px;
+                padding: 1.2rem 1.5rem;
+                font-size: 1.05rem;
+            }
         }
     </style>
 </head>
@@ -80,6 +114,5 @@
 
     <div class="footer">© 2025 Destiny Activity Tracker</div>
 </body>
-
 
 </html>
