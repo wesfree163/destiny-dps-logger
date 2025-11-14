@@ -3,116 +3,98 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Destiny Activity Log</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(180deg, #0e0e0e 0%, #1a1a1a 100%);
             color: #ffffff;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            min-height: 100vh;
             text-align: center;
-            padding: 1rem;
+            min-height: 100vh;
         }
 
         h1 {
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            margin-bottom: 0.8rem;
+            font-size: 2.4rem;
+            margin-top: 2rem;
             color: #00aaff;
         }
 
         p.subtitle {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            font-size: 1.1rem;
             color: #cccccc;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
+        /* STACKED character list */
         .card-container {
+            width: 90%;
+            max-width: 420px;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: column;
             gap: 1rem;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding-bottom: 1rem;
-            width: 100%;
-            scrollbar-width: none;
-        }
-
-        .card-container::-webkit-scrollbar {
-            display: none;
+            margin-top: 1.5rem;
         }
 
         .card {
-            flex: 0 0 auto;
             background: #1c1c1c;
             border-radius: 12px;
-            padding: 1.8rem 2.2rem;
-            min-width: 140px;
-            cursor: pointer;
-            transition: all 0.25s ease-in-out;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            padding: 1.2rem;
             text-decoration: none;
             color: white;
-            font-size: 1.3rem;
-            font-weight: 500;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
             border: 1px solid transparent;
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border: 1px solid #00aaff;
-            box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+            transform: translateY(-4px);
+            border-color: #00aaff;
+            box-shadow: 0 0 18px rgba(0, 170, 255, 0.35);
         }
 
         .footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
+            margin-top: auto;
+            padding: 1rem;
+            font-size: 0.85rem;
             color: #777;
         }
 
-        @media (max-width: 768px) {
-            .card {
-                font-size: 1.1rem;
-                padding: 1.5rem 1.8rem;
-            }
-        }
-
+        /* Slightly larger tap targets on smartphones */
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.9rem;
+                font-size: 2rem;
             }
-
-            p.subtitle {
-                font-size: 1rem;
-            }
-
             .card {
-                min-width: 120px;
-                padding: 1.2rem 1.5rem;
-                font-size: 1.05rem;
+                font-size: 1.3rem;
+                padding: 1rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to Destiny Activity Log</h1>
-    <p class="subtitle">View your recent Destiny 2 activity reports by character.</p>
-    <p class="subtitle">(Est. 10/2025)</p>
+
+    <h1>Destiny Activity Log</h1>
+    <p class="subtitle">View your recent Destiny 2 activity reports.</p>
 
     <div class="card-container">
-        <a href="hunter.html" class="card">Hunter</a>
         <a href="titan.html" class="card">Titan</a>
+        <a href="hunter.html" class="card">Hunter</a>
         <a href="warlock.html" class="card">Warlock</a>
     </div>
 
     <div class="footer">© 2025 Destiny Activity Tracker</div>
+
 </body>
 
 </html>
