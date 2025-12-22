@@ -1,356 +1,226 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Warlock</title>
 <style>
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #f5f5f5;
-  padding: 1.5rem;
-  margin: 0;
+    background:#0e0e0e;
+    color:white;
+    font-family:Arial;
+    padding:12px;
 }
-
-h1 {
-  color: #ffd700;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
+.activity {
+    background:#1c1c1c;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:12px;
 }
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.navbar a {
-  background-color: #222;
-  color: #ffd700;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.navbar a:hover {
-  background-color: #ffcc33;
-  color: #000;
-  transform: scale(1.05);
-}
-
-button {
-  background-color: #ffd700;
-  color: #000;
-  padding: 0.7em 1.2em;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0.3rem;
-  width: 48%;
-}
-
-button:hover {
-  background-color: #ffcc33;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.drawer {
-  background: #1c1c1c;
-  border-radius: 12px;
-  margin: 1em 0;
-  padding: 1em;
-  box-shadow: 0 0 10px #000;
-}
-
-.drawer-header {
-  cursor: pointer;
-  padding: 0.8em;
-  background: #222;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.drawer-content {
-  display: none;
-  padding: 1em;
-  background: #181818;
-  border-radius: 8px;
-  font-size: 1.05rem;
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-    font-size: 1.05rem;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  .drawer-header {
-    font-size: 1rem;
-  }
-  .drawer-content {
-    font-size: 1rem;
-  }
-  button {
-    font-size: 1rem;
-  }
-}
+h1 { color:#00aaff; }
+hr { border:1px solid #333; }
 </style>
-<script>
-function toggleDrawer(id) {
-  var e = document.getElementById(id);
-  e.style.display = (e.style.display === 'block') ? 'none' : 'block';
-}
-function expandAll(state) {
-  var contents = document.getElementsByClassName('drawer-content');
-  for (var i = 0; i < contents.length; i++) {
-    contents[i].style.display = state ? 'block' : 'none';
-  }
-}
-</script>
 </head>
 <body>
-<h1>Destiny 2 Activities — Warlock</h1>
-<div class="navbar">
-  <a href="hunter.html">Hunter</a>
-  <a href="titan.html">Titan</a>
-  <a href="warlock.html">Warlock</a>
-</div>
-<div class="controls">
-  <button onclick="expandAll(true)">Expand All</button>
-  <button onclick="expandAll(false)">Collapse All</button>
-</div>
+<h1>Warlock</h1>
+<p><b>Exotic Armor:</b> Necrotic Grip</p>
 
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer0')">
-            12/21/2025 — Private Match
-          </div>
-          <div class="drawer-content" id="drawer0">
+        <div class="activity">
+            <h3>2025-12-22</h3>
+            <p><b>Duration:</b> 8m 12s</p>
+            <p><b>K/D/A:</b> 3/6/1 (K/D 0.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
+        </div>
+        
+        <div class="activity">
+            <h3>2025-12-22</h3>
+            <p><b>Duration:</b> 7m 25s</p>
+            <p><b>K/D/A:</b> 5/6/1 (K/D 0.83)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
+        </div>
+        
+        <div class="activity">
+            <h3>2025-12-22</h3>
+            <p><b>Duration:</b> 5m 48s</p>
+            <p><b>K/D/A:</b> 2/3/0 (K/D 0.67)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
+        </div>
+        
+        <div class="activity">
+            <h3>2025-12-22</h3>
+            <p><b>Duration:</b> 5m 19s</p>
+            <p><b>K/D/A:</b> 2/4/2 (K/D 0.5)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
+        </div>
+        
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 11m 38s</p>
-            <p><b>K/D/A:</b> 5/14/0 (<b>K/D:</b> 0.36)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, SUROS Regime, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 5/14/0 (K/D 0.36)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer1')">
-            12/21/2025 — Private Match
-          </div>
-          <div class="drawer-content" id="drawer1">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 11m 30s</p>
-            <p><b>K/D/A:</b> 6/10/0 (<b>K/D:</b> 0.6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/10/0 (K/D 0.6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer2')">
-            12/21/2025 — Private Match
-          </div>
-          <div class="drawer-content" id="drawer2">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 3m 4s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer3')">
-            12/21/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer3">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 1m 58s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer4')">
-            12/21/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer4">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 8m 44s</p>
-            <p><b>K/D/A:</b> 5/8/1 (<b>K/D:</b> 0.62)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Relentless (Adept), Gjallarhorn, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 5/8/1 (K/D 0.62)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer5')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer5">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 9m 42s</p>
-            <p><b>K/D/A:</b> 3/4/2 (<b>K/D:</b> 0.75)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Relentless (Adept), Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/4/2 (K/D 0.75)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer6')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer6">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 9m 1s</p>
-            <p><b>K/D/A:</b> 6/4/6 (<b>K/D:</b> 1.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Relentless (Adept), Compass Rose, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/4/6 (K/D 1.5)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer7')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer7">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 11m 6s</p>
-            <p><b>K/D/A:</b> 29/7/5 (<b>K/D:</b> 4.14)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Relentless (Adept), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 29/7/5 (K/D 4.14)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer8')">
-            12/16/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer8">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 10m 2s</p>
-            <p><b>K/D/A:</b> 1/4/0 (<b>K/D:</b> 0.25)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Compass Rose, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 1/4/0 (K/D 0.25)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer9')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer9">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 8m 18s</p>
-            <p><b>K/D/A:</b> 8/3/3 (<b>K/D:</b> 2.67)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Unwavering Duty, Lumina</p>
-          </div>
+            <p><b>K/D/A:</b> 8/3/3 (K/D 2.67)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer10')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer10">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 12m 36s</p>
-            <p><b>K/D/A:</b> 20/6/5 (<b>K/D:</b> 3.33)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Lumina, Unwavering Duty</p>
-          </div>
+            <p><b>K/D/A:</b> 20/6/5 (K/D 3.33)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer11')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer11">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 7m 37s</p>
-            <p><b>K/D/A:</b> 10/5/8 (<b>K/D:</b> 2.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Lumina, Compass Rose, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 10/5/8 (K/D 2.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer12')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer12">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 8m 46s</p>
-            <p><b>K/D/A:</b> 12/7/9 (<b>K/D:</b> 1.71)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Lumina, Compass Rose, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 12/7/9 (K/D 1.71)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer13')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer13">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 10m 1s</p>
-            <p><b>K/D/A:</b> 11/11/5 (<b>K/D:</b> 1.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Lumina, Compass Rose, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 11/11/5 (K/D 1.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer14')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer14">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 11m 30s</p>
-            <p><b>K/D/A:</b> 12/8/3 (<b>K/D:</b> 1.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Lumina, Compass Rose, Unwavering Duty</p>
-          </div>
+            <p><b>K/D/A:</b> 12/8/3 (K/D 1.5)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer15')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer15">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 12m 6s</p>
-            <p><b>K/D/A:</b> 6/3/0 (<b>K/D:</b> 2.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Lumina, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/3/0 (K/D 2.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer16')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer16">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 8m 18s</p>
-            <p><b>K/D/A:</b> 5/12/0 (<b>K/D:</b> 0.42)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Lumina, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 5/12/0 (K/D 0.42)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer17')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer17">
+        <div class="activity">
+            <h3>2025-12-15</h3>
             <p><b>Duration:</b> 8m 47s</p>
-            <p><b>K/D/A:</b> 15/5/7 (<b>K/D:</b> 3.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Compass Rose, Lumina, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 15/5/7 (K/D 3.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
 </body>

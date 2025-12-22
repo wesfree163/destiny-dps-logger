@@ -1,1412 +1,901 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hunter</title>
 <style>
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #f5f5f5;
-  padding: 1.5rem;
-  margin: 0;
+    background:#0e0e0e;
+    color:white;
+    font-family:Arial;
+    padding:12px;
 }
-
-h1 {
-  color: #ffd700;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
+.activity {
+    background:#1c1c1c;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:12px;
 }
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.navbar a {
-  background-color: #222;
-  color: #ffd700;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.navbar a:hover {
-  background-color: #ffcc33;
-  color: #000;
-  transform: scale(1.05);
-}
-
-button {
-  background-color: #ffd700;
-  color: #000;
-  padding: 0.7em 1.2em;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0.3rem;
-  width: 48%;
-}
-
-button:hover {
-  background-color: #ffcc33;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.drawer {
-  background: #1c1c1c;
-  border-radius: 12px;
-  margin: 1em 0;
-  padding: 1em;
-  box-shadow: 0 0 10px #000;
-}
-
-.drawer-header {
-  cursor: pointer;
-  padding: 0.8em;
-  background: #222;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.drawer-content {
-  display: none;
-  padding: 1em;
-  background: #181818;
-  border-radius: 8px;
-  font-size: 1.05rem;
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-    font-size: 1.05rem;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  .drawer-header {
-    font-size: 1rem;
-  }
-  .drawer-content {
-    font-size: 1rem;
-  }
-  button {
-    font-size: 1rem;
-  }
-}
+h1 { color:#00aaff; }
+hr { border:1px solid #333; }
 </style>
-<script>
-function toggleDrawer(id) {
-  var e = document.getElementById(id);
-  e.style.display = (e.style.display === 'block') ? 'none' : 'block';
-}
-function expandAll(state) {
-  var contents = document.getElementsByClassName('drawer-content');
-  for (var i = 0; i < contents.length; i++) {
-    contents[i].style.display = state ? 'block' : 'none';
-  }
-}
-</script>
 </head>
 <body>
-<h1>Destiny 2 Activities — Hunter</h1>
-<div class="navbar">
-  <a href="hunter.html">Hunter</a>
-  <a href="titan.html">Titan</a>
-  <a href="warlock.html">Warlock</a>
-</div>
-<div class="controls">
-  <button onclick="expandAll(true)">Expand All</button>
-  <button onclick="expandAll(false)">Collapse All</button>
-</div>
+<h1>Hunter</h1>
+<p><b>Exotic Armor:</b> Gifted Conviction</p>
 
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer0')">
-            12/21/2025 — The Coil: Customize
-          </div>
-          <div class="drawer-content" id="drawer0">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 35m 40s</p>
-            <p><b>K/D/A:</b> 88/4/65 (<b>K/D:</b> 22.0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Cloudstrike, Neoptolemus II, Blowout</p>
-          </div>
+            <p><b>K/D/A:</b> 88/4/65 (K/D 22.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer1')">
-            12/21/2025 — Unknown (122763493)
-          </div>
-          <div class="drawer-content" id="drawer1">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 8m 23s</p>
-            <p><b>K/D/A:</b> 15/1/15 (<b>K/D:</b> 15.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mercury-A, Exalted Truth, Gjallarhorn</p>
-          </div>
+            <p><b>K/D/A:</b> 15/1/15 (K/D 15.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer2')">
-            12/21/2025 — Unknown (122763493)
-          </div>
-          <div class="drawer-content" id="drawer2">
+        <div class="activity">
+            <h3>2025-12-21</h3>
             <p><b>Duration:</b> 26m 42s</p>
-            <p><b>K/D/A:</b> 43/5/70 (<b>K/D:</b> 8.6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mercury-A, Gjallarhorn, Exalted Truth</p>
-          </div>
+            <p><b>K/D/A:</b> 43/5/70 (K/D 8.6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer3')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer3">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 7m 9s</p>
-            <p><b>K/D/A:</b> 8/2/1 (<b>K/D:</b> 4.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3984776322), Cloudstrike, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/2/1 (K/D 4.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer4')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer4">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 15s</p>
-            <p><b>K/D/A:</b> 3/0/1 (<b>K/D:</b> 3)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3984776322), Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/0/1 (K/D 3)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer5')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer5">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 48s</p>
-            <p><b>K/D/A:</b> 0/6/1 (<b>K/D:</b> 0.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/6/1 (K/D 0.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer6')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer6">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 57s</p>
-            <p><b>K/D/A:</b> 1/5/0 (<b>K/D:</b> 0.2)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 1/5/0 (K/D 0.2)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer7')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer7">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 6m 1s</p>
-            <p><b>K/D/A:</b> 6/3/4 (<b>K/D:</b> 2.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Cloudstrike, Unknown (3984776322), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/3/4 (K/D 2.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer8')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer8">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 36s</p>
-            <p><b>K/D/A:</b> 0/4/3 (<b>K/D:</b> 0.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/4/3 (K/D 0.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer9')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer9">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 50s</p>
-            <p><b>K/D/A:</b> 3/2/1 (<b>K/D:</b> 1.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Cloudstrike, Unknown (3984776322), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer10')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer10">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 9m 36s</p>
-            <p><b>K/D/A:</b> 7/8/4 (<b>K/D:</b> 0.88)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Unknown (3984776322), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 7/8/4 (K/D 0.88)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer11')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer11">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 5m 48s</p>
-            <p><b>K/D/A:</b> 3/2/1 (<b>K/D:</b> 1.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Better Devils, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer12')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer12">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 6m 47s</p>
-            <p><b>K/D/A:</b> 1/5/2 (<b>K/D:</b> 0.2)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 1/5/2 (K/D 0.2)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer13')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer13">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 8m 7s</p>
-            <p><b>K/D/A:</b> 8/4/4 (<b>K/D:</b> 2.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Unknown (3984776322), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/4/4 (K/D 2.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer14')">
-            12/20/2025 — Trials of Osiris: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer14">
+        <div class="activity">
+            <h3>2025-12-20</h3>
             <p><b>Duration:</b> 6m 11s</p>
-            <p><b>K/D/A:</b> 2/4/0 (<b>K/D:</b> 0.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Jade Rabbit, Unknown (3146657389), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 2/4/0 (K/D 0.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer15')">
-            12/19/2025 — Unknown (4225173883)
-          </div>
-          <div class="drawer-content" id="drawer15">
+        <div class="activity">
+            <h3>2025-12-19</h3>
             <p><b>Duration:</b> 10m 38s</p>
-            <p><b>K/D/A:</b> 70/0/34 (<b>K/D:</b> 70)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 70/0/34 (K/D 70)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer16')">
-            12/19/2025 — Overthrow
-          </div>
-          <div class="drawer-content" id="drawer16">
-            <p><b>Duration:</b> 88m 48s</p>
-            <p><b>K/D/A:</b> 162/0/7 (<b>K/D:</b> 162)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine, Liminal Vigil (Adept), Synanceia, Ergo Sum</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-19</h3>
+            <p><b>Duration:</b> 1h 28m 48s</p>
+            <p><b>K/D/A:</b> 162/0/7 (K/D 162)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer17')">
-            12/19/2025 — Unknown (2322836187)
-          </div>
-          <div class="drawer-content" id="drawer17">
+        <div class="activity">
+            <h3>2025-12-19</h3>
             <p><b>Duration:</b> 21m 53s</p>
-            <p><b>K/D/A:</b> 92/0/73 (<b>K/D:</b> 92)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 92/0/73 (K/D 92)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer18')">
-            12/18/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer18">
-            <p><b>Duration:</b> 429m 7s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 7h 9m 7s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer19')">
-            12/18/2025 — Unknown (3371967659)
-          </div>
-          <div class="drawer-content" id="drawer19">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 48m 43s</p>
-            <p><b>K/D/A:</b> 680/14/0 (<b>K/D:</b> 48.57)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-          </div>
+            <p><b>K/D/A:</b> 680/14/0 (K/D 48.57)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer20')">
-            12/18/2025 — Unknown (2488154205)
-          </div>
-          <div class="drawer-content" id="drawer20">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 3m 30s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer21')">
-            12/18/2025 — Unknown (2915561434)
-          </div>
-          <div class="drawer-content" id="drawer21">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 33m 27s</p>
-            <p><b>K/D/A:</b> 192/1/0 (<b>K/D:</b> 192.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ergo Sum, Aureus Neutralizer, Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-          </div>
+            <p><b>K/D/A:</b> 192/1/0 (K/D 192.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer22')">
-            12/18/2025 — Unknown (2915561434)
-          </div>
-          <div class="drawer-content" id="drawer22">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 7m 47s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer23')">
-            12/18/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer23">
-            <p><b>Duration:</b> 276m 54s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 4h 36m 54s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer24')">
-            12/18/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer24">
-            <p><b>Duration:</b> 369m 59s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 6h 9m 59s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer25')">
-            12/18/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer25">
-            <p><b>Duration:</b> 870m 55s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 14h 30m 55s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer26')">
-            12/18/2025 — Excision: Grandmaster
-          </div>
-          <div class="drawer-content" id="drawer26">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 35m 29s</p>
-            <p><b>K/D/A:</b> 30/5/110 (<b>K/D:</b> 6.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Leviathan's Breath, Exalted Truth</p>
-          </div>
+            <p><b>K/D/A:</b> 30/5/110 (K/D 6.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer27')">
-            12/18/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer27">
-            <p><b>Duration:</b> 660m 8s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 11h 0m 8s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer28')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer28">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 16m 52s</p>
-            <p><b>K/D/A:</b> 9/1/31 (<b>K/D:</b> 9.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 9/1/31 (K/D 9.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer29')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer29">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 17m 29s</p>
-            <p><b>K/D/A:</b> 9/2/10 (<b>K/D:</b> 4.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 9/2/10 (K/D 4.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer30')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer30">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 17m 32s</p>
-            <p><b>K/D/A:</b> 26/1/34 (<b>K/D:</b> 26.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 26/1/34 (K/D 26.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer31')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer31">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 7m 27s</p>
-            <p><b>K/D/A:</b> 25/0/13 (<b>K/D:</b> 25)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 25/0/13 (K/D 25)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer32')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer32">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 18m 54s</p>
-            <p><b>K/D/A:</b> 21/2/66 (<b>K/D:</b> 10.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 21/2/66 (K/D 10.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer33')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer33">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 20m 7s</p>
-            <p><b>K/D/A:</b> 3/0/11 (<b>K/D:</b> 3)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/0/11 (K/D 3)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer34')">
-            12/18/2025 — Overthrow
-          </div>
-          <div class="drawer-content" id="drawer34">
-            <p><b>Duration:</b> 258m 59s</p>
-            <p><b>K/D/A:</b> 127/1/12 (<b>K/D:</b> 127.0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-18</h3>
+            <p><b>Duration:</b> 4h 18m 59s</p>
+            <p><b>K/D/A:</b> 127/1/12 (K/D 127.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer35')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer35">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 20m 2s</p>
-            <p><b>K/D/A:</b> 26/0/29 (<b>K/D:</b> 26)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Exalted Truth, Leviathan's Breath, Mint Retrograde</p>
-          </div>
+            <p><b>K/D/A:</b> 26/0/29 (K/D 26)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer36')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer36">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 18m 49s</p>
-            <p><b>K/D/A:</b> 80/2/58 (<b>K/D:</b> 40.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 80/2/58 (K/D 40.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer37')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer37">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 17m 50s</p>
-            <p><b>K/D/A:</b> 53/2/82 (<b>K/D:</b> 26.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 53/2/82 (K/D 26.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer38')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer38">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 17m 30s</p>
-            <p><b>K/D/A:</b> 46/2/81 (<b>K/D:</b> 23.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 46/2/81 (K/D 23.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer39')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer39">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 19m 51s</p>
-            <p><b>K/D/A:</b> 22/1/29 (<b>K/D:</b> 22.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 22/1/29 (K/D 22.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer40')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer40">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 16m 37s</p>
-            <p><b>K/D/A:</b> 30/1/64 (<b>K/D:</b> 30.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine</p>
-          </div>
+            <p><b>K/D/A:</b> 30/1/64 (K/D 30.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer41')">
-            12/18/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer41">
+        <div class="activity">
+            <h3>2025-12-18</h3>
             <p><b>Duration:</b> 25m 54s</p>
-            <p><b>K/D/A:</b> 2/0/3 (<b>K/D:</b> 2)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Bygones, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 2/0/3 (K/D 2)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer42')">
-            12/17/2025 — Excision: Replay
-          </div>
-          <div class="drawer-content" id="drawer42">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 17m 20s</p>
-            <p><b>K/D/A:</b> 6/0/40 (<b>K/D:</b> 6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Bygones, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/0/40 (K/D 6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer43')">
-            12/17/2025 — Unknown (588518263)
-          </div>
-          <div class="drawer-content" id="drawer43">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 54m 51s</p>
-            <p><b>K/D/A:</b> 447/6/0 (<b>K/D:</b> 74.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine, Unknown (3049715579)</p>
-          </div>
+            <p><b>K/D/A:</b> 447/6/0 (K/D 74.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer44')">
-            12/17/2025 — Unknown (588518263)
-          </div>
-          <div class="drawer-content" id="drawer44">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 59m 42s</p>
-            <p><b>K/D/A:</b> 68/4/0 (<b>K/D:</b> 17.0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Revision Zero, Exalted Truth, Falling Guillotine, Bygones, Leviathan's Breath</p>
-          </div>
+            <p><b>K/D/A:</b> 68/4/0 (K/D 17.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer45')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer45">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 7m 40s</p>
-            <p><b>K/D/A:</b> 0/1/0 (<b>K/D:</b> 0.0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/1/0 (K/D 0.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer46')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer46">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 8m 46s</p>
-            <p><b>K/D/A:</b> 12/10/6 (<b>K/D:</b> 1.2)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Liminal Vigil (Adept), Cloudstrike, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 12/10/6 (K/D 1.2)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer47')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer47">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 11m 37s</p>
-            <p><b>K/D/A:</b> 17/10/8 (<b>K/D:</b> 1.7)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang (Baroque), The Last Word, The Jade Rabbit</p>
-          </div>
+            <p><b>K/D/A:</b> 17/10/8 (K/D 1.7)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer48')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer48">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 8m 21s</p>
-            <p><b>K/D/A:</b> 11/13/11 (<b>K/D:</b> 0.85)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 11/13/11 (K/D 0.85)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer49')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer49">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 11m 50s</p>
-            <p><b>K/D/A:</b> 13/12/11 (<b>K/D:</b> 1.08)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 13/12/11 (K/D 1.08)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer50')">
-            12/17/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer50">
-            <p><b>Duration:</b> 449m 36s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-17</h3>
+            <p><b>Duration:</b> 7h 29m 36s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer51')">
-            12/17/2025 — Unknown (3353968685)
-          </div>
-          <div class="drawer-content" id="drawer51">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 7m 2s</p>
-            <p><b>K/D/A:</b> 11/6/6 (<b>K/D:</b> 1.83)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 11/6/6 (K/D 1.83)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer52')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer52">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 7m 16s</p>
-            <p><b>K/D/A:</b> 8/11/5 (<b>K/D:</b> 0.73)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (1419158093), Code Duello, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/11/5 (K/D 0.73)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer53')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer53">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 9m 27s</p>
-            <p><b>K/D/A:</b> 11/7/3 (<b>K/D:</b> 1.57)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Jade Rabbit, Drang (Baroque), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 11/7/3 (K/D 1.57)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer54')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer54">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 7m 22s</p>
-            <p><b>K/D/A:</b> 8/12/2 (<b>K/D:</b> 0.67)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Khvostov 7G-0X, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/12/2 (K/D 0.67)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer55')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer55">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 9m 19s</p>
-            <p><b>K/D/A:</b> 12/11/4 (<b>K/D:</b> 1.09)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang (Baroque), The Jade Rabbit, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 12/11/4 (K/D 1.09)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer56')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer56">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 11m 13s</p>
-            <p><b>K/D/A:</b> 7/11/5 (<b>K/D:</b> 0.64)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Last Word, Drang (Baroque), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 7/11/5 (K/D 0.64)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer57')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer57">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 8m 12s</p>
-            <p><b>K/D/A:</b> 8/9/3 (<b>K/D:</b> 0.89)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Last Word, Drang (Baroque), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/9/3 (K/D 0.89)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer58')">
-            12/17/2025 — Unknown (2380724356)
-          </div>
-          <div class="drawer-content" id="drawer58">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 30m 50s</p>
-            <p><b>K/D/A:</b> 148/1/0 (<b>K/D:</b> 148.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Bygones, Exalted Truth, Leviathan's Breath, Drang (Baroque)</p>
-          </div>
+            <p><b>K/D/A:</b> 148/1/0 (K/D 148.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer59')">
-            12/17/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer59">
-            <p><b>Duration:</b> 842m 16s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-17</h3>
+            <p><b>Duration:</b> 14h 2m 16s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer60')">
-            12/17/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer60">
-            <p><b>Duration:</b> 905m 29s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-17</h3>
+            <p><b>Duration:</b> 15h 5m 29s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer61')">
-            12/17/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer61">
-            <p><b>Duration:</b> 561m 21s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-17</h3>
+            <p><b>Duration:</b> 9h 21m 21s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer62')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer62">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 7m 48s</p>
-            <p><b>K/D/A:</b> 10/7/4 (<b>K/D:</b> 1.43)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang, The Last Word, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 10/7/4 (K/D 1.43)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer63')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer63">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 9m 26s</p>
-            <p><b>K/D/A:</b> 16/11/4 (<b>K/D:</b> 1.45)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang, The Last Word, Drang (Baroque)</p>
-          </div>
+            <p><b>K/D/A:</b> 16/11/4 (K/D 1.45)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer64')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer64">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 6m 29s</p>
-            <p><b>K/D/A:</b> 10/4/1 (<b>K/D:</b> 2.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang, The Last Word, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 10/4/1 (K/D 2.5)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer65')">
-            12/17/2025 — Unknown (385674984)
-          </div>
-          <div class="drawer-content" id="drawer65">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 10m 28s</p>
-            <p><b>K/D/A:</b> 12/15/7 (<b>K/D:</b> 0.8)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Drang, The Last Word, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 12/15/7 (K/D 0.8)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer66')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer66">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 11m 8s</p>
-            <p><b>K/D/A:</b> 2/2/0 (<b>K/D:</b> 1.0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 2/2/0 (K/D 1.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer67')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer67">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 6m 39s</p>
-            <p><b>K/D/A:</b> 4/5/2 (<b>K/D:</b> 0.8)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3146657388), Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 4/5/2 (K/D 0.8)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer68')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer68">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 10m 17s</p>
-            <p><b>K/D/A:</b> 13/9/4 (<b>K/D:</b> 1.44)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3146657388), Cloudstrike, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 13/9/4 (K/D 1.44)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer69')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer69">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 8m 24s</p>
-            <p><b>K/D/A:</b> 5/8/1 (<b>K/D:</b> 0.62)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> A Sudden Death (Adept), Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 5/8/1 (K/D 0.62)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer70')">
-            12/17/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer70">
+        <div class="activity">
+            <h3>2025-12-17</h3>
             <p><b>Duration:</b> 10m 30s</p>
-            <p><b>K/D/A:</b> 16/8/5 (<b>K/D:</b> 2.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept), Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 16/8/5 (K/D 2.0)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer71')">
-            12/17/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer71">
-            <p><b>Duration:</b> 1537m 42s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-17</h3>
+            <p><b>Duration:</b> 25h 37m 42s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer72')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer72">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 10m 56s</p>
-            <p><b>K/D/A:</b> 3/9/4 (<b>K/D:</b> 0.33)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Memory Interdict, Khvostov 7G-0X, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/9/4 (K/D 0.33)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer73')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer73">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 10m 53s</p>
-            <p><b>K/D/A:</b> 3/10/3 (<b>K/D:</b> 0.3)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Blowout, Mercurial Overreach, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 3/10/3 (K/D 0.3)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer74')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer74">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 10m 57s</p>
-            <p><b>K/D/A:</b> 9/15/3 (<b>K/D:</b> 0.6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Blowout, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 9/15/3 (K/D 0.6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer75')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer75">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 6m 0s</p>
-            <p><b>K/D/A:</b> 12/7/0 (<b>K/D:</b> 1.71)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Hawkmoon, Blowout, Matador 64</p>
-          </div>
+            <p><b>K/D/A:</b> 12/7/0 (K/D 1.71)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer76')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer76">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 7m 44s</p>
-            <p><b>K/D/A:</b> 6/10/6 (<b>K/D:</b> 0.6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Hawkmoon, Matador 64, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 6/10/6 (K/D 0.6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer77')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer77">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 8m 51s</p>
-            <p><b>K/D/A:</b> 9/14/8 (<b>K/D:</b> 0.64)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Matador 64, Hawkmoon, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 9/14/8 (K/D 0.64)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer78')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer78">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 9m 16s</p>
-            <p><b>K/D/A:</b> 6/10/6 (<b>K/D:</b> 0.6)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Hawkmoon, Matador 64, Blowout</p>
-          </div>
+            <p><b>K/D/A:</b> 6/10/6 (K/D 0.6)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer79')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer79">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 7m 35s</p>
-            <p><b>K/D/A:</b> 12/7/7 (<b>K/D:</b> 1.71)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3146657388), Duality, Code Duello</p>
-          </div>
+            <p><b>K/D/A:</b> 12/7/7 (K/D 1.71)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer80')">
-            12/16/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer80">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 8m 45s</p>
-            <p><b>K/D/A:</b> 6/11/3 (<b>K/D:</b> 0.55)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (1419158093), Duality, Code Duello</p>
-          </div>
+            <p><b>K/D/A:</b> 6/11/3 (K/D 0.55)</p>
+            <p><b>Outcome:</b> Win</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer81')">
-            12/16/2025 — Unknown (2488154205)
-          </div>
-          <div class="drawer-content" id="drawer81">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 2m 48s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer82')">
-            12/16/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer82">
-            <p><b>Duration:</b> 412m 33s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-16</h3>
+            <p><b>Duration:</b> 6h 52m 33s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer83')">
-            12/16/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer83">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 10m 4s</p>
-            <p><b>K/D/A:</b> 8/14/3 (<b>K/D:</b> 0.57)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Last Word, Distant Tumulus, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 8/14/3 (K/D 0.57)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer84')">
-            12/16/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer84">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 6m 31s</p>
-            <p><b>K/D/A:</b> 5/6/0 (<b>K/D:</b> 0.83)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> The Last Word, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 5/6/0 (K/D 0.83)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer85')">
-            12/16/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer85">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 9m 40s</p>
-            <p><b>K/D/A:</b> 7/6/5 (<b>K/D:</b> 1.17)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3146657388), Distant Tumulus, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 7/6/5 (K/D 1.17)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer86')">
-            12/16/2025 — Unknown (4140517944)
-          </div>
-          <div class="drawer-content" id="drawer86">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 16m 18s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer87')">
-            12/16/2025 — Unknown (3630941325)
-          </div>
-          <div class="drawer-content" id="drawer87">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 37m 28s</p>
-            <p><b>K/D/A:</b> 410/1/0 (<b>K/D:</b> 410.0)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Exalted Truth, Revision Zero, Falling Guillotine</p>
-          </div>
+            <p><b>K/D/A:</b> 410/1/0 (K/D 410.0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer88')">
-            12/16/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer88">
-            <p><b>Duration:</b> 104m 55s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-16</h3>
+            <p><b>Duration:</b> 1h 44m 55s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer89')">
-            12/16/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer89">
-            <p><b>Duration:</b> 441m 12s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-16</h3>
+            <p><b>Duration:</b> 7h 21m 12s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer90')">
-            12/16/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer90">
-            <p><b>Duration:</b> 561m 58s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-16</h3>
+            <p><b>Duration:</b> 9h 21m 58s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer91')">
-            12/16/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer91">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 6m 4s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer92')">
-            12/16/2025 — Unknown (3811437163)
-          </div>
-          <div class="drawer-content" id="drawer92">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 21m 23s</p>
-            <p><b>K/D/A:</b> 212/0/0 (<b>K/D:</b> 212)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Unknown (3620277039), Exalted Truth, Falling Guillotine, Succession</p>
-          </div>
+            <p><b>K/D/A:</b> 212/0/0 (K/D 212)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer93')">
-            12/16/2025 — Unknown (850804897)
-          </div>
-          <div class="drawer-content" id="drawer93">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 7m 3s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer94')">
-            12/16/2025 — Unknown (850804897)
-          </div>
-          <div class="drawer-content" id="drawer94">
+        <div class="activity">
+            <h3>2025-12-16</h3>
             <p><b>Duration:</b> 7m 36s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer95')">
-            12/15/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer95">
-            <p><b>Duration:</b> 397m 4s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-15</h3>
+            <p><b>Duration:</b> 6h 37m 4s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer96')">
-            12/15/2025 — Unknown (1477356389)
-          </div>
-          <div class="drawer-content" id="drawer96">
-            <p><b>Duration:</b> 500m 49s</p>
-            <p><b>K/D/A:</b> 0/0/0 (<b>K/D:</b> 0)</p>
-            <p><b>Outcome:</b> Loss/Failed</p>
-            <p><b>Weapons:</b> Unknown, Unknown, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer97')">
-            12/15/2025 — Competitive: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer97">
-            <p><b>Duration:</b> 10m 15s</p>
-            <p><b>K/D/A:</b> 6/14/2 (<b>K/D:</b> 0.43)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Precipial, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer98')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer98">
-            <p><b>Duration:</b> 10m 21s</p>
-            <p><b>K/D/A:</b> 12/10/7 (<b>K/D:</b> 1.2)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Precipial, Ace of Spades, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer99')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer99">
-            <p><b>Duration:</b> 10m 49s</p>
-            <p><b>K/D/A:</b> 8/12/5 (<b>K/D:</b> 0.67)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Precipial, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer100')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer100">
-            <p><b>Duration:</b> 7m 28s</p>
-            <p><b>K/D/A:</b> 3/6/6 (<b>K/D:</b> 0.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Unknown, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer101')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer101">
-            <p><b>Duration:</b> 10m 24s</p>
-            <p><b>K/D/A:</b> 8/11/6 (<b>K/D:</b> 0.73)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Unknown, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer102')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer102">
-            <p><b>Duration:</b> 11m 36s</p>
-            <p><b>K/D/A:</b> 22/4/7 (<b>K/D:</b> 5.5)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Memory Interdict, Precipial</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer103')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer103">
-            <p><b>Duration:</b> 13m 1s</p>
-            <p><b>K/D/A:</b> 15/9/9 (<b>K/D:</b> 1.67)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Precipial, Ace of Spades, Unknown</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer104')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer104">
-            <p><b>Duration:</b> 12m 10s</p>
-            <p><b>K/D/A:</b> 11/12/5 (<b>K/D:</b> 0.92)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Admetus-D, Ace of Spades, Precipial</p>
-          </div>
-        </div>
-        
-        <div class="drawer">
-          <div class="drawer-header" onclick="toggleDrawer('drawer105')">
-            12/15/2025 — Control: Matchmade
-          </div>
-          <div class="drawer-content" id="drawer105">
-            <p><b>Duration:</b> 9m 10s</p>
-            <p><b>K/D/A:</b> 7/4/4 (<b>K/D:</b> 1.75)</p>
-            <p><b>Outcome:</b> Win/Completed</p>
-            <p><b>Weapons:</b> Ace of Spades, Memory Interdict, 1000 Yard Stare</p>
-          </div>
+        <div class="activity">
+            <h3>2025-12-15</h3>
+            <p><b>Duration:</b> 8h 20m 49s</p>
+            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+            <p><b>Outcome:</b> Loss</p>
+            <p><b>Weapons:</b> </p>
+            <hr>
         </div>
         
 </body>
