@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Warlock</title>
 <style>
 body {
@@ -89,6 +89,47 @@ hr { border:1px solid #333; }
 .note-actions button:hover {
   background: #33bbff;
 }
+
+/* Mobile touch stability */
+button, textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent zoom jump on focus */
+textarea {
+  font-size: 16px;
+}
+
+/* Larger tap targets */
+.note-toggle,
+.note-actions button {
+  min-height: 44px;
+}
+
+/* Better mobile layout */
+@media (max-width: 720px) {
+  body {
+    padding: 8px;
+  }
+
+  .activity {
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  .note-toggle {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .note-actions button {
+    width: 100%;
+  }
+}
 </style>
 <script>
 function toggleNote(id, type) {
@@ -111,6 +152,23 @@ function loadNote(id, type) {
     if (input) input.value = saved;
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".note-toggle").forEach(btn => {
+        btn.addEventListener("click", function () {
+        toggleNote(this.dataset.id, this.dataset.type);
+        });
+    });
+
+document.querySelectorAll(".note-actions button").forEach(btn => {
+    btn.addEventListener("click", function () {
+    const parent = this.closest(".note-box");
+    const id = parent.id.split("-").pop();
+    const type = parent.id.split("-")[2];
+    saveNote(id, type);
+    });
+});
+});
 </script>
 
 
@@ -125,7 +183,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Bad Juju</p>
 
-        <button class="note-toggle" onclick="toggleNote('16705755309', 'item')">
+        <button class="note-toggle" data-id="16705755309" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -138,7 +196,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16705755309', 'loop')">
+        <button class="note-toggle" data-id="16705755309" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -151,6 +209,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16705755309', 'item');
         loadNote('16705755309', 'loop');
@@ -166,7 +225,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Unwavering Duty, Compass Rose, Bad Juju</p>
 
-        <button class="note-toggle" onclick="toggleNote('16705741400', 'item')">
+        <button class="note-toggle" data-id="16705741400" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -179,7 +238,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16705741400', 'loop')">
+        <button class="note-toggle" data-id="16705741400" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -192,6 +251,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16705741400', 'item');
         loadNote('16705741400', 'loop');
@@ -207,7 +267,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Loss</p>
         <p><b>Weapons:</b> Bad Juju</p>
 
-        <button class="note-toggle" onclick="toggleNote('16705619916', 'item')">
+        <button class="note-toggle" data-id="16705619916" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -220,7 +280,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16705619916', 'loop')">
+        <button class="note-toggle" data-id="16705619916" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -233,6 +293,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16705619916', 'item');
         loadNote('16705619916', 'loop');
@@ -248,7 +309,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Bad Juju</p>
 
-        <button class="note-toggle" onclick="toggleNote('16705610595', 'item')">
+        <button class="note-toggle" data-id="16705610595" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -261,7 +322,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16705610595', 'loop')">
+        <button class="note-toggle" data-id="16705610595" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -274,6 +335,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16705610595', 'item');
         loadNote('16705610595', 'loop');
@@ -289,7 +351,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Compass Rose, SUROS Regime</p>
 
-        <button class="note-toggle" onclick="toggleNote('16701843366', 'item')">
+        <button class="note-toggle" data-id="16701843366" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -302,7 +364,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16701843366', 'loop')">
+        <button class="note-toggle" data-id="16701843366" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -315,6 +377,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16701843366', 'item');
         loadNote('16701843366', 'loop');
@@ -330,7 +393,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Compass Rose</p>
 
-        <button class="note-toggle" onclick="toggleNote('16701812758', 'item')">
+        <button class="note-toggle" data-id="16701812758" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -343,7 +406,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16701812758', 'loop')">
+        <button class="note-toggle" data-id="16701812758" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -356,6 +419,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16701812758', 'item');
         loadNote('16701812758', 'loop');
@@ -371,7 +435,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Loss</p>
         <p><b>Weapons:</b> </p>
 
-        <button class="note-toggle" onclick="toggleNote('16701786644', 'item')">
+        <button class="note-toggle" data-id="16701786644" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -384,7 +448,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16701786644', 'loop')">
+        <button class="note-toggle" data-id="16701786644" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -397,6 +461,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16701786644', 'item');
         loadNote('16701786644', 'loop');
@@ -412,7 +477,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Loss</p>
         <p><b>Weapons:</b> </p>
 
-        <button class="note-toggle" onclick="toggleNote('16701782774', 'item')">
+        <button class="note-toggle" data-id="16701782774" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -425,7 +490,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16701782774', 'loop')">
+        <button class="note-toggle" data-id="16701782774" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -438,6 +503,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16701782774', 'item');
         loadNote('16701782774', 'loop');
@@ -453,7 +519,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Relentless (Adept), Gjallarhorn</p>
 
-        <button class="note-toggle" onclick="toggleNote('16701777443', 'item')">
+        <button class="note-toggle" data-id="16701777443" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -466,7 +532,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16701777443', 'loop')">
+        <button class="note-toggle" data-id="16701777443" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -479,6 +545,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16701777443', 'item');
         loadNote('16701777443', 'loop');
@@ -494,7 +561,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Loss</p>
         <p><b>Weapons:</b> Relentless (Adept)</p>
 
-        <button class="note-toggle" onclick="toggleNote('16693843585', 'item')">
+        <button class="note-toggle" data-id="16693843585" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -507,7 +574,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16693843585', 'loop')">
+        <button class="note-toggle" data-id="16693843585" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -520,6 +587,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16693843585', 'item');
         loadNote('16693843585', 'loop');
@@ -535,7 +603,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Relentless (Adept), Compass Rose</p>
 
-        <button class="note-toggle" onclick="toggleNote('16693821077', 'item')">
+        <button class="note-toggle" data-id="16693821077" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -548,7 +616,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16693821077', 'loop')">
+        <button class="note-toggle" data-id="16693821077" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -561,6 +629,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16693821077', 'item');
         loadNote('16693821077', 'loop');
@@ -576,7 +645,7 @@ function loadNote(id, type) {
         <p><b>Outcome:</b> Win</p>
         <p><b>Weapons:</b> Compass Rose, Relentless (Adept)</p>
 
-        <button class="note-toggle" onclick="toggleNote('16693809924', 'item')">
+        <button class="note-toggle" data-id="16693809924" data-type="item">
             Unsaved Item Data
         </button>
 
@@ -589,7 +658,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
-        <button class="note-toggle" onclick="toggleNote('16693809924', 'loop')">
+        <button class="note-toggle" data-id="16693809924" data-type="loop">
             Main Gameplay Loop
         </button>
 
@@ -602,6 +671,7 @@ function loadNote(id, type) {
             </div>
         </div>
 
+        
         <script>
         loadNote('16693809924', 'item');
         loadNote('16693809924', 'loop');
