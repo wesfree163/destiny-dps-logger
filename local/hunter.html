@@ -92,22 +92,22 @@ hr { border:1px solid #333; }
 </style>
 <script>
 function toggleNote(id, type) {
-  const box = document.getElementById(`note-box-$<class 'type'>-$<built-in function id>`);
+  const box = document.getElementById("note-box-" + type + "-" + id);
   if (!box) return;
-  box.style.display = box.style.display === "block" ? "none" : "block";
+  box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 
 function saveNote(id, type) {
-  const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+  const input = document.getElementById("note-input-" + type + "-" + id);
   if (!input) return;
-  localStorage.setItem(`note-$<class 'type'>-$<built-in function id>`, input.value);
+  localStorage.setItem("note-" + type + "-" + id, input.value);
   alert("Saved");
 }
 
 function loadNote(id, type) {
-  const saved = localStorage.getItem(`note-$<class 'type'>-$<built-in function id>`);
+  const saved = localStorage.getItem("note-" + type + "-" + id);
   if (saved !== null) {
-    const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+    const input = document.getElementById("note-input-" + type + "-" + id);
     if (input) input.value = saved;
   }
 }
@@ -3229,47 +3229,6 @@ function loadNote(id, type) {
         <script>
         loadNote('16691449444', 'item');
         loadNote('16691449444', 'loop');
-        </script>
-
-        <hr>
-        </div>
-        
-        <div class="activity">
-        <h3>2025-12-16 — Pacifica</h3>
-        <p><b>Duration:</b> 10m 53s</p>
-        <p><b>K/D/A:</b> 3/10/3 (K/D 0.3)</p>
-        <p><b>Outcome:</b> Win</p>
-        <p><b>Weapons:</b> Blowout, Mercurial Overreach</p>
-
-        <button class="note-toggle" onclick="toggleNote('16691415045', 'item')">
-            Unsaved Item Data
-        </button>
-
-        <div class="note-box" id="note-box-item-16691415045">
-            <textarea id="note-input-item-16691415045" maxlength="144"
-                placeholder="Item notes (max 144 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16691415045', 'item')">Save</button>
-            </div>
-        </div>
-
-        <button class="note-toggle" onclick="toggleNote('16691415045', 'loop')">
-            Main Gameplay Loop
-        </button>
-
-        <div class="note-box" id="note-box-loop-16691415045">
-            <textarea id="note-input-loop-16691415045" maxlength="144"
-                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16691415045', 'loop')">Save</button>
-            </div>
-        </div>
-
-        <script>
-        loadNote('16691415045', 'item');
-        loadNote('16691415045', 'loop');
         </script>
 
         <hr>

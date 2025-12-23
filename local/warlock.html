@@ -92,22 +92,22 @@ hr { border:1px solid #333; }
 </style>
 <script>
 function toggleNote(id, type) {
-  const box = document.getElementById(`note-box-$<class 'type'>-$<built-in function id>`);
+  const box = document.getElementById("note-box-" + type + "-" + id);
   if (!box) return;
-  box.style.display = box.style.display === "block" ? "none" : "block";
+  box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 
 function saveNote(id, type) {
-  const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+  const input = document.getElementById("note-input-" + type + "-" + id);
   if (!input) return;
-  localStorage.setItem(`note-$<class 'type'>-$<built-in function id>`, input.value);
+  localStorage.setItem("note-" + type + "-" + id, input.value);
   alert("Saved");
 }
 
 function loadNote(id, type) {
-  const saved = localStorage.getItem(`note-$<class 'type'>-$<built-in function id>`);
+  const saved = localStorage.getItem("note-" + type + "-" + id);
   if (saved !== null) {
-    const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+    const input = document.getElementById("note-input-" + type + "-" + id);
     if (input) input.value = saved;
   }
 }
