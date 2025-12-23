@@ -19,792 +19,3260 @@ body {
 }
 h1 { color:#00aaff; }
 hr { border:1px solid #333; }
+
+.note-toggle {
+  margin-top: 8px;
+  background: #222;
+  color: #00aaff;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.note-toggle:hover {
+  background: #00aaff;
+  color: #000;
+}
+
+.note-box {
+  display: none;
+  margin-top: 8px;
+}
+
+.note-box textarea {
+  width: 100%;
+  min-height: 60px;
+  max-height: 120px;
+  resize: vertical;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.note-box {
+  display: none;
+  margin-top: 8px;
+}
+
+.note-box textarea {
+  width: 100%;
+  min-height: 80px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #333;
+  resize: vertical;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.note-actions button {
+  background: #00aaff;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-actions button:hover {
+  background: #33bbff;
+}
 </style>
+<script>
+function toggleNote(id, type) {
+  const box = document.getElementById(`note-box-$<class 'type'>-$<built-in function id>`);
+  if (!box) return;
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function saveNote(id, type) {
+  const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+  if (!input) return;
+  localStorage.setItem(`note-$<class 'type'>-$<built-in function id>`, input.value);
+  alert("Saved");
+}
+
+function loadNote(id, type) {
+  const saved = localStorage.getItem(`note-$<class 'type'>-$<built-in function id>`);
+  if (saved !== null) {
+    const input = document.getElementById(`note-input-$<class 'type'>-$<built-in function id>`);
+    if (input) input.value = saved;
+  }
+}
+</script>
+
+
 </head>
 <body>
 <h1>Hunter</h1>
 
         <div class="activity">
-            <h3>2025-12-21 — The Coil: Customize</h3>
-            <p><b>Duration:</b> 35m 40s</p>
-            <p><b>K/D/A:</b> 88/4/65 (K/D 22.0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Cloudstrike, Neoptolemus II, Blowout</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-21 — The Arms Dealer: Customize</h3>
-            <p><b>Duration:</b> 8m 23s</p>
-            <p><b>K/D/A:</b> 15/1/15 (K/D 15.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mercury-A, Exalted Truth, Gjallarhorn</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-21 — The Arms Dealer: Customize</h3>
-            <p><b>Duration:</b> 26m 42s</p>
-            <p><b>K/D/A:</b> 43/5/70 (K/D 8.6)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mercury-A, Gjallarhorn, Exalted Truth</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 7m 9s</p>
-            <p><b>K/D/A:</b> 8/2/1 (K/D 4.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> All or Nothing, Cloudstrike</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 15s</p>
-            <p><b>K/D/A:</b> 3/0/1 (K/D 3)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> All or Nothing</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 48s</p>
-            <p><b>K/D/A:</b> 0/6/1 (K/D 0.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 57s</p>
-            <p><b>K/D/A:</b> 1/5/0 (K/D 0.2)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 6m 1s</p>
-            <p><b>K/D/A:</b> 6/3/4 (K/D 2.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Cloudstrike, All or Nothing</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 36s</p>
-            <p><b>K/D/A:</b> 0/4/3 (K/D 0.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 50s</p>
-            <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Cloudstrike, All or Nothing</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 9m 36s</p>
-            <p><b>K/D/A:</b> 7/8/4 (K/D 0.88)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64, All or Nothing</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 5m 48s</p>
-            <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64, Better Devils</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 6m 47s</p>
-            <p><b>K/D/A:</b> 1/5/2 (K/D 0.2)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 8m 7s</p>
-            <p><b>K/D/A:</b> 8/4/4 (K/D 2.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64, All or Nothing</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-20 — Altar of Flame</h3>
-            <p><b>Duration:</b> 6m 11s</p>
-            <p><b>K/D/A:</b> 2/4/0 (K/D 0.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Jade Rabbit, Uncivil Discourse</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-19 — Astral Alignment</h3>
-            <p><b>Duration:</b> 10m 38s</p>
-            <p><b>K/D/A:</b> 70/0/34 (K/D 70)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-19 — Overthrow</h3>
-            <p><b>Duration:</b> 1h 28m 48s</p>
-            <p><b>K/D/A:</b> 162/0/7 (K/D 162)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine, Liminal Vigil (Adept), Synanceia, Ergo Sum</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-19 — Selina Morass, Venus: Sabotage: Matchmade</h3>
-            <p><b>Duration:</b> 21m 53s</p>
-            <p><b>K/D/A:</b> 92/0/73 (K/D 92)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 7h 9m 7s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Glory Beyond: Legendary</h3>
-            <p><b>Duration:</b> 48m 43s</p>
-            <p><b>K/D/A:</b> 680/14/0 (K/D 48.57)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — The Derelict</h3>
-            <p><b>Duration:</b> 3m 30s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — The Long Con: Legendary</h3>
-            <p><b>Duration:</b> 33m 27s</p>
-            <p><b>K/D/A:</b> 192/1/0 (K/D 192.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Ergo Sum, Aureus Neutralizer, Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — The Long Con: Legendary</h3>
-            <p><b>Duration:</b> 7m 47s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 4h 36m 54s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 6h 9m 59s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 14h 30m 55s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Grandmaster</h3>
-            <p><b>Duration:</b> 35m 29s</p>
-            <p><b>K/D/A:</b> 30/5/110 (K/D 6.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Leviathan's Breath, Exalted Truth</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 11h 0m 8s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 16m 52s</p>
-            <p><b>K/D/A:</b> 9/1/31 (K/D 9.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 17m 29s</p>
-            <p><b>K/D/A:</b> 9/2/10 (K/D 4.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 17m 32s</p>
-            <p><b>K/D/A:</b> 26/1/34 (K/D 26.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 7m 27s</p>
-            <p><b>K/D/A:</b> 25/0/13 (K/D 25)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 18m 54s</p>
-            <p><b>K/D/A:</b> 21/2/66 (K/D 10.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 20m 7s</p>
-            <p><b>K/D/A:</b> 3/0/11 (K/D 3)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Overthrow</h3>
-            <p><b>Duration:</b> 4h 18m 59s</p>
-            <p><b>K/D/A:</b> 127/1/12 (K/D 127.0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 20m 2s</p>
-            <p><b>K/D/A:</b> 26/0/29 (K/D 26)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Exalted Truth, Leviathan's Breath, Mint Retrograde</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 18m 49s</p>
-            <p><b>K/D/A:</b> 80/2/58 (K/D 40.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 17m 50s</p>
-            <p><b>K/D/A:</b> 53/2/82 (K/D 26.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Mint Retrograde, Exalted Truth</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 17m 30s</p>
-            <p><b>K/D/A:</b> 46/2/81 (K/D 23.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 19m 51s</p>
-            <p><b>K/D/A:</b> 22/1/29 (K/D 22.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 16m 37s</p>
-            <p><b>K/D/A:</b> 30/1/64 (K/D 30.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-18 — Excision: Replay</h3>
-            <p><b>Duration:</b> 25m 54s</p>
-            <p><b>K/D/A:</b> 2/0/3 (K/D 2)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Bygones</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Excision: Replay</h3>
-            <p><b>Duration:</b> 17m 20s</p>
-            <p><b>K/D/A:</b> 6/0/40 (K/D 6)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Bygones</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Fire and Ice: Legendary</h3>
-            <p><b>Duration:</b> 54m 51s</p>
-            <p><b>K/D/A:</b> 447/6/0 (K/D 74.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine, Praxic Blade</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Fire and Ice: Legendary</h3>
-            <p><b>Duration:</b> 59m 42s</p>
-            <p><b>K/D/A:</b> 68/4/0 (K/D 17.0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> Revision Zero, Exalted Truth, Falling Guillotine, Bygones, Leviathan's Breath</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Wormhaven</h3>
-            <p><b>Duration:</b> 7m 40s</p>
-            <p><b>K/D/A:</b> 0/1/0 (K/D 0.0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Eventide Labs</h3>
-            <p><b>Duration:</b> 8m 46s</p>
-            <p><b>K/D/A:</b> 12/10/6 (K/D 1.2)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Liminal Vigil (Adept), Cloudstrike</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Eternity</h3>
-            <p><b>Duration:</b> 11m 37s</p>
-            <p><b>K/D/A:</b> 17/10/8 (K/D 1.7)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang (Baroque), The Last Word, The Jade Rabbit</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Cauldron</h3>
-            <p><b>Duration:</b> 8m 21s</p>
-            <p><b>K/D/A:</b> 11/13/11 (K/D 0.85)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Vostok</h3>
-            <p><b>Duration:</b> 11m 50s</p>
-            <p><b>K/D/A:</b> 13/12/11 (K/D 1.08)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 7h 29m 36s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — The Fortress</h3>
-            <p><b>Duration:</b> 7m 2s</p>
-            <p><b>K/D/A:</b> 11/6/6 (K/D 1.83)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Cirrus Plaza</h3>
-            <p><b>Duration:</b> 7m 16s</p>
-            <p><b>K/D/A:</b> 8/11/5 (K/D 0.73)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> M-17 "Fast Talker", Code Duello</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Midtown</h3>
-            <p><b>Duration:</b> 9m 27s</p>
-            <p><b>K/D/A:</b> 11/7/3 (K/D 1.57)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Jade Rabbit, Drang (Baroque)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Dissonance</h3>
-            <p><b>Duration:</b> 7m 22s</p>
-            <p><b>K/D/A:</b> 8/12/2 (K/D 0.67)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Khvostov 7G-0X</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Dissonance</h3>
-            <p><b>Duration:</b> 9m 19s</p>
-            <p><b>K/D/A:</b> 12/11/4 (K/D 1.09)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang (Baroque), The Jade Rabbit</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Eventide Labs</h3>
-            <p><b>Duration:</b> 11m 13s</p>
-            <p><b>K/D/A:</b> 7/11/5 (K/D 0.64)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Last Word, Drang (Baroque)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — The Dead Cliffs</h3>
-            <p><b>Duration:</b> 8m 12s</p>
-            <p><b>K/D/A:</b> 8/9/3 (K/D 0.89)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Last Word, Drang (Baroque)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Out In The Cold: Legendary</h3>
-            <p><b>Duration:</b> 30m 50s</p>
-            <p><b>K/D/A:</b> 148/1/0 (K/D 148.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Bygones, Exalted Truth, Leviathan's Breath, Drang (Baroque)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 14h 2m 16s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 15h 5m 29s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 9h 21m 21s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — The Burnout</h3>
-            <p><b>Duration:</b> 7m 48s</p>
-            <p><b>K/D/A:</b> 10/7/4 (K/D 1.43)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang, The Last Word</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Widow's Court</h3>
-            <p><b>Duration:</b> 9m 26s</p>
-            <p><b>K/D/A:</b> 16/11/4 (K/D 1.45)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang, The Last Word, Drang (Baroque)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Cirrus Plaza</h3>
-            <p><b>Duration:</b> 6m 29s</p>
-            <p><b>K/D/A:</b> 10/4/1 (K/D 2.5)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang, The Last Word</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Cauldron</h3>
-            <p><b>Duration:</b> 10m 28s</p>
-            <p><b>K/D/A:</b> 12/15/7 (K/D 0.8)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Drang, The Last Word</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — The Dead Cliffs</h3>
-            <p><b>Duration:</b> 11m 8s</p>
-            <p><b>K/D/A:</b> 2/2/0 (K/D 1.0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Meltdown</h3>
-            <p><b>Duration:</b> 6m 39s</p>
-            <p><b>K/D/A:</b> 4/5/2 (K/D 0.8)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Modified B-7 Pistol</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Altar of Flame</h3>
-            <p><b>Duration:</b> 10m 17s</p>
-            <p><b>K/D/A:</b> 13/9/4 (K/D 1.44)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Modified B-7 Pistol, Cloudstrike</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Fragment</h3>
-            <p><b>Duration:</b> 8m 24s</p>
-            <p><b>K/D/A:</b> 5/8/1 (K/D 0.62)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> A Sudden Death (Adept)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — The Burnout</h3>
-            <p><b>Duration:</b> 10m 30s</p>
-            <p><b>K/D/A:</b> 16/8/5 (K/D 2.0)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept)</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-17 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 25h 37m 42s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Cirrus Plaza</h3>
-            <p><b>Duration:</b> 10m 56s</p>
-            <p><b>K/D/A:</b> 3/9/4 (K/D 0.33)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Memory Interdict, Khvostov 7G-0X</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Pacifica</h3>
-            <p><b>Duration:</b> 10m 53s</p>
-            <p><b>K/D/A:</b> 3/10/3 (K/D 0.3)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Blowout, Mercurial Overreach</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Meltdown</h3>
-            <p><b>Duration:</b> 10m 57s</p>
-            <p><b>K/D/A:</b> 9/15/3 (K/D 0.6)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64, Blowout</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Eventide Labs</h3>
-            <p><b>Duration:</b> 6m 0s</p>
-            <p><b>K/D/A:</b> 12/7/0 (K/D 1.71)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Hawkmoon, Blowout, Matador 64</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Wormhaven</h3>
-            <p><b>Duration:</b> 7m 44s</p>
-            <p><b>K/D/A:</b> 6/10/6 (K/D 0.6)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Hawkmoon, Matador 64</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — The Burnout</h3>
-            <p><b>Duration:</b> 8m 51s</p>
-            <p><b>K/D/A:</b> 9/14/8 (K/D 0.64)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Matador 64, Hawkmoon</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Pacifica</h3>
-            <p><b>Duration:</b> 9m 16s</p>
-            <p><b>K/D/A:</b> 6/10/6 (K/D 0.6)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Hawkmoon, Matador 64, Blowout</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — The Dead Cliffs</h3>
-            <p><b>Duration:</b> 7m 35s</p>
-            <p><b>K/D/A:</b> 12/7/7 (K/D 1.71)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Modified B-7 Pistol, Duality, Code Duello</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — The Dead Cliffs</h3>
-            <p><b>Duration:</b> 8m 45s</p>
-            <p><b>K/D/A:</b> 6/11/3 (K/D 0.55)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> M-17 "Fast Talker", Duality, Code Duello</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — The Derelict</h3>
-            <p><b>Duration:</b> 2m 48s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 6h 52m 33s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — The Citadel</h3>
-            <p><b>Duration:</b> 10m 4s</p>
-            <p><b>K/D/A:</b> 8/14/3 (K/D 0.57)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Last Word, Distant Tumulus</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Solitude</h3>
-            <p><b>Duration:</b> 6m 31s</p>
-            <p><b>K/D/A:</b> 5/6/0 (K/D 0.83)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> The Last Word</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Javelin-4</h3>
-            <p><b>Duration:</b> 9m 40s</p>
-            <p><b>K/D/A:</b> 7/6/5 (K/D 1.17)</p>
-            <p><b>Outcome:</b> Win</p>
-            <p><b>Weapons:</b> Modified B-7 Pistol, Distant Tumulus</p>
-            <hr>
-        </div>
-        
-        <div class="activity">
-            <h3>2025-12-16 — Tharsis Outpost</h3>
-            <p><b>Duration:</b> 16m 18s</p>
-            <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
-            <p><b>Outcome:</b> Loss</p>
-            <p><b>Weapons:</b> </p>
-            <hr>
+        <h3>2025-12-23 — Warden of Nothing: Customize</h3>
+        <p><b>Duration:</b> 34m 48s</p>
+        <p><b>K/D/A:</b> 64/3/75 (K/D 21.33)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Revision Zero, Joxer's Longsword, A Good Shout</p>
+
+        <button class="note-toggle" onclick="toggleNote('16708215576', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16708215576">
+            <textarea id="note-input-item-16708215576" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708215576', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16708215576', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16708215576">
+            <textarea id="note-input-loop-16708215576" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708215576', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16708215576', 'item');
+        loadNote('16708215576', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-23 — Warden of Nothing: Customize</h3>
+        <p><b>Duration:</b> 2m 16s</p>
+        <p><b>K/D/A:</b> 0/1/4 (K/D 0.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16708146044', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16708146044">
+            <textarea id="note-input-item-16708146044" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708146044', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16708146044', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16708146044">
+            <textarea id="note-input-loop-16708146044" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708146044', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16708146044', 'item');
+        loadNote('16708146044', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-23 — The Pale Heart</h3>
+        <p><b>Duration:</b> 25m 47s</p>
+        <p><b>K/D/A:</b> 77/0/0 (K/D 77)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Hushed Whisper, The Slammer (Adept), Cloudstrike</p>
+
+        <button class="note-toggle" onclick="toggleNote('16708059727', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16708059727">
+            <textarea id="note-input-item-16708059727" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708059727', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16708059727', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16708059727">
+            <textarea id="note-input-loop-16708059727" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16708059727', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16708059727', 'item');
+        loadNote('16708059727', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-21 — The Coil: Customize</h3>
+        <p><b>Duration:</b> 35m 40s</p>
+        <p><b>K/D/A:</b> 88/4/65 (K/D 22.0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Cloudstrike, Neoptolemus II, Blowout</p>
+
+        <button class="note-toggle" onclick="toggleNote('16703282729', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16703282729">
+            <textarea id="note-input-item-16703282729" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16703282729', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16703282729', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16703282729">
+            <textarea id="note-input-loop-16703282729" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16703282729', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16703282729', 'item');
+        loadNote('16703282729', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-21 — The Arms Dealer: Customize</h3>
+        <p><b>Duration:</b> 8m 23s</p>
+        <p><b>K/D/A:</b> 15/1/15 (K/D 15.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mercury-A, Exalted Truth, Gjallarhorn</p>
+
+        <button class="note-toggle" onclick="toggleNote('16701932314', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16701932314">
+            <textarea id="note-input-item-16701932314" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16701932314', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16701932314', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16701932314">
+            <textarea id="note-input-loop-16701932314" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16701932314', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16701932314', 'item');
+        loadNote('16701932314', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-21 — The Arms Dealer: Customize</h3>
+        <p><b>Duration:</b> 26m 42s</p>
+        <p><b>K/D/A:</b> 43/5/70 (K/D 8.6)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mercury-A, Gjallarhorn, Exalted Truth</p>
+
+        <button class="note-toggle" onclick="toggleNote('16701911107', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16701911107">
+            <textarea id="note-input-item-16701911107" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16701911107', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16701911107', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16701911107">
+            <textarea id="note-input-loop-16701911107" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16701911107', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16701911107', 'item');
+        loadNote('16701911107', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 7m 9s</p>
+        <p><b>K/D/A:</b> 8/2/1 (K/D 4.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> All or Nothing, Cloudstrike</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700926226', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700926226">
+            <textarea id="note-input-item-16700926226" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700926226', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700926226', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700926226">
+            <textarea id="note-input-loop-16700926226" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700926226', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700926226', 'item');
+        loadNote('16700926226', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 15s</p>
+        <p><b>K/D/A:</b> 3/0/1 (K/D 3)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> All or Nothing</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700909532', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700909532">
+            <textarea id="note-input-item-16700909532" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700909532', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700909532', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700909532">
+            <textarea id="note-input-loop-16700909532" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700909532', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700909532', 'item');
+        loadNote('16700909532', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 48s</p>
+        <p><b>K/D/A:</b> 0/6/1 (K/D 0.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16700896079', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700896079">
+            <textarea id="note-input-item-16700896079" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700896079', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700896079', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700896079">
+            <textarea id="note-input-loop-16700896079" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700896079', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700896079', 'item');
+        loadNote('16700896079', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 57s</p>
+        <p><b>K/D/A:</b> 1/5/0 (K/D 0.2)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16700882306', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700882306">
+            <textarea id="note-input-item-16700882306" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700882306', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700882306', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700882306">
+            <textarea id="note-input-loop-16700882306" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700882306', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700882306', 'item');
+        loadNote('16700882306', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 6m 1s</p>
+        <p><b>K/D/A:</b> 6/3/4 (K/D 2.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Cloudstrike, All or Nothing</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700866653', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700866653">
+            <textarea id="note-input-item-16700866653" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700866653', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700866653', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700866653">
+            <textarea id="note-input-loop-16700866653" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700866653', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700866653', 'item');
+        loadNote('16700866653', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 36s</p>
+        <p><b>K/D/A:</b> 0/4/3 (K/D 0.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16700852513', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700852513">
+            <textarea id="note-input-item-16700852513" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700852513', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700852513', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700852513">
+            <textarea id="note-input-loop-16700852513" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700852513', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700852513', 'item');
+        loadNote('16700852513', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 50s</p>
+        <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Cloudstrike, All or Nothing</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700839588', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700839588">
+            <textarea id="note-input-item-16700839588" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700839588', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700839588', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700839588">
+            <textarea id="note-input-loop-16700839588" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700839588', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700839588', 'item');
+        loadNote('16700839588', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 9m 36s</p>
+        <p><b>K/D/A:</b> 7/8/4 (K/D 0.88)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Matador 64, All or Nothing</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700762725', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700762725">
+            <textarea id="note-input-item-16700762725" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700762725', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700762725', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700762725">
+            <textarea id="note-input-loop-16700762725" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700762725', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700762725', 'item');
+        loadNote('16700762725', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 5m 48s</p>
+        <p><b>K/D/A:</b> 3/2/1 (K/D 1.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Matador 64, Better Devils</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700741193', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700741193">
+            <textarea id="note-input-item-16700741193" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700741193', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700741193', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700741193">
+            <textarea id="note-input-loop-16700741193" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700741193', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700741193', 'item');
+        loadNote('16700741193', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 6m 47s</p>
+        <p><b>K/D/A:</b> 1/5/2 (K/D 0.2)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Matador 64</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700696033', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700696033">
+            <textarea id="note-input-item-16700696033" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700696033', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700696033', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700696033">
+            <textarea id="note-input-loop-16700696033" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700696033', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700696033', 'item');
+        loadNote('16700696033', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 8m 7s</p>
+        <p><b>K/D/A:</b> 8/4/4 (K/D 2.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Matador 64, All or Nothing</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700627032', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700627032">
+            <textarea id="note-input-item-16700627032" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700627032', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700627032', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700627032">
+            <textarea id="note-input-loop-16700627032" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700627032', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700627032', 'item');
+        loadNote('16700627032', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-20 — Altar of Flame</h3>
+        <p><b>Duration:</b> 6m 11s</p>
+        <p><b>K/D/A:</b> 2/4/0 (K/D 0.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> The Jade Rabbit, Uncivil Discourse</p>
+
+        <button class="note-toggle" onclick="toggleNote('16700608808', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16700608808">
+            <textarea id="note-input-item-16700608808" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700608808', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16700608808', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16700608808">
+            <textarea id="note-input-loop-16700608808" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16700608808', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16700608808', 'item');
+        loadNote('16700608808', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-19 — Astral Alignment</h3>
+        <p><b>Duration:</b> 10m 38s</p>
+        <p><b>K/D/A:</b> 70/0/34 (K/D 70)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16697013024', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697013024">
+            <textarea id="note-input-item-16697013024" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697013024', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697013024', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697013024">
+            <textarea id="note-input-loop-16697013024" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697013024', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697013024', 'item');
+        loadNote('16697013024', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-19 — Overthrow</h3>
+        <p><b>Duration:</b> 1h 28m 48s</p>
+        <p><b>K/D/A:</b> 162/0/7 (K/D 162)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine, Liminal Vigil (Adept), Synanceia, Ergo Sum</p>
+
+        <button class="note-toggle" onclick="toggleNote('16697115227', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697115227">
+            <textarea id="note-input-item-16697115227" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697115227', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697115227', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697115227">
+            <textarea id="note-input-loop-16697115227" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697115227', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697115227', 'item');
+        loadNote('16697115227', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-19 — Selina Morass, Venus: Sabotage: Matchmade</h3>
+        <p><b>Duration:</b> 21m 53s</p>
+        <p><b>K/D/A:</b> 92/0/73 (K/D 92)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16696970261', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696970261">
+            <textarea id="note-input-item-16696970261" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696970261', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696970261', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696970261">
+            <textarea id="note-input-loop-16696970261" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696970261', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696970261', 'item');
+        loadNote('16696970261', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 7h 9m 7s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16697496547', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697496547">
+            <textarea id="note-input-item-16697496547" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697496547', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697496547', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697496547">
+            <textarea id="note-input-loop-16697496547" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697496547', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697496547', 'item');
+        loadNote('16697496547', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Glory Beyond: Legendary</h3>
+        <p><b>Duration:</b> 48m 43s</p>
+        <p><b>K/D/A:</b> 680/14/0 (K/D 48.57)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
+
+        <button class="note-toggle" onclick="toggleNote('16696744751', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696744751">
+            <textarea id="note-input-item-16696744751" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696744751', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696744751', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696744751">
+            <textarea id="note-input-loop-16696744751" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696744751', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696744751', 'item');
+        loadNote('16696744751', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — The Derelict</h3>
+        <p><b>Duration:</b> 3m 30s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16696645451', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696645451">
+            <textarea id="note-input-item-16696645451" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696645451', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696645451', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696645451">
+            <textarea id="note-input-loop-16696645451" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696645451', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696645451', 'item');
+        loadNote('16696645451', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — The Long Con: Legendary</h3>
+        <p><b>Duration:</b> 33m 27s</p>
+        <p><b>K/D/A:</b> 192/1/0 (K/D 192.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Ergo Sum, Aureus Neutralizer, Exalted Truth, Mint Retrograde, Falling Guillotine</p>
+
+        <button class="note-toggle" onclick="toggleNote('16696639053', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696639053">
+            <textarea id="note-input-item-16696639053" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696639053', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696639053', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696639053">
+            <textarea id="note-input-loop-16696639053" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696639053', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696639053', 'item');
+        loadNote('16696639053', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — The Long Con: Legendary</h3>
+        <p><b>Duration:</b> 7m 47s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16696563214', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696563214">
+            <textarea id="note-input-item-16696563214" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696563214', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696563214', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696563214">
+            <textarea id="note-input-loop-16696563214" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696563214', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696563214', 'item');
+        loadNote('16696563214', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 4h 36m 54s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16697076350', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697076350">
+            <textarea id="note-input-item-16697076350" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697076350', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697076350', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697076350">
+            <textarea id="note-input-loop-16697076350" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697076350', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697076350', 'item');
+        loadNote('16697076350', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 6h 9m 59s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16697184243', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697184243">
+            <textarea id="note-input-item-16697184243" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697184243', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697184243', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697184243">
+            <textarea id="note-input-loop-16697184243" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697184243', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697184243', 'item');
+        loadNote('16697184243', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 14h 30m 55s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16697784164', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697784164">
+            <textarea id="note-input-item-16697784164" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697784164', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697784164', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697784164">
+            <textarea id="note-input-loop-16697784164" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697784164', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697784164', 'item');
+        loadNote('16697784164', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Grandmaster</h3>
+        <p><b>Duration:</b> 35m 29s</p>
+        <p><b>K/D/A:</b> 30/5/110 (K/D 6.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Leviathan's Breath, Exalted Truth</p>
+
+        <button class="note-toggle" onclick="toggleNote('16696258823', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16696258823">
+            <textarea id="note-input-item-16696258823" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696258823', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16696258823', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16696258823">
+            <textarea id="note-input-loop-16696258823" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16696258823', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16696258823', 'item');
+        loadNote('16696258823', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 11h 0m 8s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16697318926', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16697318926">
+            <textarea id="note-input-item-16697318926" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697318926', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16697318926', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16697318926">
+            <textarea id="note-input-loop-16697318926" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16697318926', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16697318926', 'item');
+        loadNote('16697318926', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 16m 52s</p>
+        <p><b>K/D/A:</b> 9/1/31 (K/D 9.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695804201', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695804201">
+            <textarea id="note-input-item-16695804201" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695804201', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695804201', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695804201">
+            <textarea id="note-input-loop-16695804201" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695804201', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695804201', 'item');
+        loadNote('16695804201', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 17m 29s</p>
+        <p><b>K/D/A:</b> 9/2/10 (K/D 4.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695777966', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695777966">
+            <textarea id="note-input-item-16695777966" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695777966', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695777966', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695777966">
+            <textarea id="note-input-loop-16695777966" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695777966', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695777966', 'item');
+        loadNote('16695777966', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 17m 32s</p>
+        <p><b>K/D/A:</b> 26/1/34 (K/D 26.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695765667', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695765667">
+            <textarea id="note-input-item-16695765667" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695765667', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695765667', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695765667">
+            <textarea id="note-input-loop-16695765667" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695765667', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695765667', 'item');
+        loadNote('16695765667', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 7m 27s</p>
+        <p><b>K/D/A:</b> 25/0/13 (K/D 25)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695740431', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695740431">
+            <textarea id="note-input-item-16695740431" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695740431', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695740431', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695740431">
+            <textarea id="note-input-loop-16695740431" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695740431', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695740431', 'item');
+        loadNote('16695740431', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 18m 54s</p>
+        <p><b>K/D/A:</b> 21/2/66 (K/D 10.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695729009', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695729009">
+            <textarea id="note-input-item-16695729009" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695729009', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695729009', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695729009">
+            <textarea id="note-input-loop-16695729009" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695729009', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695729009', 'item');
+        loadNote('16695729009', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 20m 7s</p>
+        <p><b>K/D/A:</b> 3/0/11 (K/D 3)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695704464', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695704464">
+            <textarea id="note-input-item-16695704464" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695704464', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695704464', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695704464">
+            <textarea id="note-input-loop-16695704464" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695704464', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695704464', 'item');
+        loadNote('16695704464', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Overthrow</h3>
+        <p><b>Duration:</b> 4h 18m 59s</p>
+        <p><b>K/D/A:</b> 127/1/12 (K/D 127.0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Falling Guillotine</p>
+
+        <button class="note-toggle" onclick="toggleNote('16695964953', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16695964953">
+            <textarea id="note-input-item-16695964953" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695964953', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16695964953', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16695964953">
+            <textarea id="note-input-loop-16695964953" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16695964953', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16695964953', 'item');
+        loadNote('16695964953', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 20m 2s</p>
+        <p><b>K/D/A:</b> 26/0/29 (K/D 26)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Exalted Truth, Leviathan's Breath, Mint Retrograde</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694737435', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694737435">
+            <textarea id="note-input-item-16694737435" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694737435', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694737435', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694737435">
+            <textarea id="note-input-loop-16694737435" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694737435', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694737435', 'item');
+        loadNote('16694737435', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 18m 49s</p>
+        <p><b>K/D/A:</b> 80/2/58 (K/D 40.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694684865', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694684865">
+            <textarea id="note-input-item-16694684865" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694684865', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694684865', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694684865">
+            <textarea id="note-input-loop-16694684865" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694684865', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694684865', 'item');
+        loadNote('16694684865', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 17m 50s</p>
+        <p><b>K/D/A:</b> 53/2/82 (K/D 26.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Exalted Truth</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694641843', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694641843">
+            <textarea id="note-input-item-16694641843" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694641843', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694641843', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694641843">
+            <textarea id="note-input-loop-16694641843" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694641843', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694641843', 'item');
+        loadNote('16694641843', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 17m 30s</p>
+        <p><b>K/D/A:</b> 46/2/81 (K/D 23.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Mint Retrograde, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694600971', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694600971">
+            <textarea id="note-input-item-16694600971" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694600971', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694600971', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694600971">
+            <textarea id="note-input-loop-16694600971" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694600971', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694600971', 'item');
+        loadNote('16694600971', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 19m 51s</p>
+        <p><b>K/D/A:</b> 22/1/29 (K/D 22.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694569501', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694569501">
+            <textarea id="note-input-item-16694569501" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694569501', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694569501', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694569501">
+            <textarea id="note-input-loop-16694569501" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694569501', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694569501', 'item');
+        loadNote('16694569501', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 16m 37s</p>
+        <p><b>K/D/A:</b> 30/1/64 (K/D 30.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694530622', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694530622">
+            <textarea id="note-input-item-16694530622" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694530622', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694530622', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694530622">
+            <textarea id="note-input-loop-16694530622" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694530622', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694530622', 'item');
+        loadNote('16694530622', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-18 — Excision: Replay</h3>
+        <p><b>Duration:</b> 25m 54s</p>
+        <p><b>K/D/A:</b> 2/0/3 (K/D 2)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Bygones</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694544255', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694544255">
+            <textarea id="note-input-item-16694544255" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694544255', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694544255', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694544255">
+            <textarea id="note-input-loop-16694544255" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694544255', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694544255', 'item');
+        loadNote('16694544255', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Excision: Replay</h3>
+        <p><b>Duration:</b> 17m 20s</p>
+        <p><b>K/D/A:</b> 6/0/40 (K/D 6)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Bygones</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694492936', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694492936">
+            <textarea id="note-input-item-16694492936" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694492936', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694492936', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694492936">
+            <textarea id="note-input-loop-16694492936" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694492936', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694492936', 'item');
+        loadNote('16694492936', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Fire and Ice: Legendary</h3>
+        <p><b>Duration:</b> 54m 51s</p>
+        <p><b>K/D/A:</b> 447/6/0 (K/D 74.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Exalted Truth, Bygones, Falling Guillotine, Praxic Blade</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694382985', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694382985">
+            <textarea id="note-input-item-16694382985" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694382985', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694382985', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694382985">
+            <textarea id="note-input-loop-16694382985" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694382985', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694382985', 'item');
+        loadNote('16694382985', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Fire and Ice: Legendary</h3>
+        <p><b>Duration:</b> 59m 42s</p>
+        <p><b>K/D/A:</b> 68/4/0 (K/D 17.0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Revision Zero, Exalted Truth, Falling Guillotine, Bygones, Leviathan's Breath</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694256754', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694256754">
+            <textarea id="note-input-item-16694256754" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694256754', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694256754', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694256754">
+            <textarea id="note-input-loop-16694256754" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694256754', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694256754', 'item');
+        loadNote('16694256754', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Wormhaven</h3>
+        <p><b>Duration:</b> 7m 40s</p>
+        <p><b>K/D/A:</b> 0/1/0 (K/D 0.0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16694129534', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694129534">
+            <textarea id="note-input-item-16694129534" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694129534', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694129534', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694129534">
+            <textarea id="note-input-loop-16694129534" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694129534', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694129534', 'item');
+        loadNote('16694129534', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Eventide Labs</h3>
+        <p><b>Duration:</b> 8m 46s</p>
+        <p><b>K/D/A:</b> 12/10/6 (K/D 1.2)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Liminal Vigil (Adept), Cloudstrike</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694120320', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694120320">
+            <textarea id="note-input-item-16694120320" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694120320', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694120320', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694120320">
+            <textarea id="note-input-loop-16694120320" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694120320', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694120320', 'item');
+        loadNote('16694120320', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Eternity</h3>
+        <p><b>Duration:</b> 11m 37s</p>
+        <p><b>K/D/A:</b> 17/10/8 (K/D 1.7)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang (Baroque), The Last Word, The Jade Rabbit</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694078606', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694078606">
+            <textarea id="note-input-item-16694078606" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694078606', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694078606', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694078606">
+            <textarea id="note-input-loop-16694078606" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694078606', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694078606', 'item');
+        loadNote('16694078606', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Cauldron</h3>
+        <p><b>Duration:</b> 8m 21s</p>
+        <p><b>K/D/A:</b> 11/13/11 (K/D 0.85)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694049474', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694049474">
+            <textarea id="note-input-item-16694049474" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694049474', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694049474', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694049474">
+            <textarea id="note-input-loop-16694049474" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694049474', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694049474', 'item');
+        loadNote('16694049474', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Vostok</h3>
+        <p><b>Duration:</b> 11m 50s</p>
+        <p><b>K/D/A:</b> 13/12/11 (K/D 1.08)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang (Baroque), Khvostov 7G-0X</p>
+
+        <button class="note-toggle" onclick="toggleNote('16694026479', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694026479">
+            <textarea id="note-input-item-16694026479" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694026479', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694026479', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694026479">
+            <textarea id="note-input-loop-16694026479" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694026479', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694026479', 'item');
+        loadNote('16694026479', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 7h 29m 36s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16694813022', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694813022">
+            <textarea id="note-input-item-16694813022" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694813022', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694813022', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694813022">
+            <textarea id="note-input-loop-16694813022" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694813022', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694813022', 'item');
+        loadNote('16694813022', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — The Fortress</h3>
+        <p><b>Duration:</b> 7m 2s</p>
+        <p><b>K/D/A:</b> 11/6/6 (K/D 1.83)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16693654181', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693654181">
+            <textarea id="note-input-item-16693654181" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693654181', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693654181', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693654181">
+            <textarea id="note-input-loop-16693654181" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693654181', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693654181', 'item');
+        loadNote('16693654181', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Cirrus Plaza</h3>
+        <p><b>Duration:</b> 7m 16s</p>
+        <p><b>K/D/A:</b> 8/11/5 (K/D 0.73)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> M-17 "Fast Talker", Code Duello</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693637035', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693637035">
+            <textarea id="note-input-item-16693637035" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693637035', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693637035', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693637035">
+            <textarea id="note-input-loop-16693637035" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693637035', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693637035', 'item');
+        loadNote('16693637035', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Midtown</h3>
+        <p><b>Duration:</b> 9m 27s</p>
+        <p><b>K/D/A:</b> 11/7/3 (K/D 1.57)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> The Jade Rabbit, Drang (Baroque)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693617781', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693617781">
+            <textarea id="note-input-item-16693617781" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693617781', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693617781', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693617781">
+            <textarea id="note-input-loop-16693617781" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693617781', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693617781', 'item');
+        loadNote('16693617781', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Dissonance</h3>
+        <p><b>Duration:</b> 7m 22s</p>
+        <p><b>K/D/A:</b> 8/12/2 (K/D 0.67)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Khvostov 7G-0X</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693587123', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693587123">
+            <textarea id="note-input-item-16693587123" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693587123', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693587123', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693587123">
+            <textarea id="note-input-loop-16693587123" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693587123', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693587123', 'item');
+        loadNote('16693587123', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Dissonance</h3>
+        <p><b>Duration:</b> 9m 19s</p>
+        <p><b>K/D/A:</b> 12/11/4 (K/D 1.09)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang (Baroque), The Jade Rabbit</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693568624', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693568624">
+            <textarea id="note-input-item-16693568624" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693568624', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693568624', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693568624">
+            <textarea id="note-input-loop-16693568624" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693568624', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693568624', 'item');
+        loadNote('16693568624', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Eventide Labs</h3>
+        <p><b>Duration:</b> 11m 13s</p>
+        <p><b>K/D/A:</b> 7/11/5 (K/D 0.64)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> The Last Word, Drang (Baroque)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693542690', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693542690">
+            <textarea id="note-input-item-16693542690" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693542690', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693542690', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693542690">
+            <textarea id="note-input-loop-16693542690" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693542690', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693542690', 'item');
+        loadNote('16693542690', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — The Dead Cliffs</h3>
+        <p><b>Duration:</b> 8m 12s</p>
+        <p><b>K/D/A:</b> 8/9/3 (K/D 0.89)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> The Last Word, Drang (Baroque)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693520128', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693520128">
+            <textarea id="note-input-item-16693520128" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693520128', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693520128', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693520128">
+            <textarea id="note-input-loop-16693520128" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693520128', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693520128', 'item');
+        loadNote('16693520128', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Out In The Cold: Legendary</h3>
+        <p><b>Duration:</b> 30m 50s</p>
+        <p><b>K/D/A:</b> 148/1/0 (K/D 148.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Bygones, Exalted Truth, Leviathan's Breath, Drang (Baroque)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16693495873', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693495873">
+            <textarea id="note-input-item-16693495873" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693495873', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693495873', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693495873">
+            <textarea id="note-input-loop-16693495873" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693495873', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693495873', 'item');
+        loadNote('16693495873', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 14h 2m 16s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16694898786', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694898786">
+            <textarea id="note-input-item-16694898786" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694898786', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694898786', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694898786">
+            <textarea id="note-input-loop-16694898786" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694898786', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694898786', 'item');
+        loadNote('16694898786', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 15h 5m 29s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16694777557', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694777557">
+            <textarea id="note-input-item-16694777557" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694777557', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694777557', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694777557">
+            <textarea id="note-input-loop-16694777557" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694777557', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694777557', 'item');
+        loadNote('16694777557', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 9h 21m 21s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16693605409', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16693605409">
+            <textarea id="note-input-item-16693605409" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693605409', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16693605409', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16693605409">
+            <textarea id="note-input-loop-16693605409" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16693605409', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16693605409', 'item');
+        loadNote('16693605409', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — The Burnout</h3>
+        <p><b>Duration:</b> 7m 48s</p>
+        <p><b>K/D/A:</b> 10/7/4 (K/D 1.43)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang, The Last Word</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692286175', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692286175">
+            <textarea id="note-input-item-16692286175" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692286175', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692286175', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692286175">
+            <textarea id="note-input-loop-16692286175" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692286175', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692286175', 'item');
+        loadNote('16692286175', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Widow's Court</h3>
+        <p><b>Duration:</b> 9m 26s</p>
+        <p><b>K/D/A:</b> 16/11/4 (K/D 1.45)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang, The Last Word, Drang (Baroque)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692244586', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692244586">
+            <textarea id="note-input-item-16692244586" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692244586', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692244586', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692244586">
+            <textarea id="note-input-loop-16692244586" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692244586', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692244586', 'item');
+        loadNote('16692244586', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Cirrus Plaza</h3>
+        <p><b>Duration:</b> 6m 29s</p>
+        <p><b>K/D/A:</b> 10/4/1 (K/D 2.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang, The Last Word</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692212998', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692212998">
+            <textarea id="note-input-item-16692212998" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692212998', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692212998', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692212998">
+            <textarea id="note-input-loop-16692212998" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692212998', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692212998', 'item');
+        loadNote('16692212998', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Cauldron</h3>
+        <p><b>Duration:</b> 10m 28s</p>
+        <p><b>K/D/A:</b> 12/15/7 (K/D 0.8)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Drang, The Last Word</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692184991', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692184991">
+            <textarea id="note-input-item-16692184991" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692184991', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692184991', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692184991">
+            <textarea id="note-input-loop-16692184991" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692184991', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692184991', 'item');
+        loadNote('16692184991', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — The Dead Cliffs</h3>
+        <p><b>Duration:</b> 11m 8s</p>
+        <p><b>K/D/A:</b> 2/2/0 (K/D 1.0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692173159', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692173159">
+            <textarea id="note-input-item-16692173159" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692173159', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692173159', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692173159">
+            <textarea id="note-input-loop-16692173159" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692173159', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692173159', 'item');
+        loadNote('16692173159', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Meltdown</h3>
+        <p><b>Duration:</b> 6m 39s</p>
+        <p><b>K/D/A:</b> 4/5/2 (K/D 0.8)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Modified B-7 Pistol</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692144208', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692144208">
+            <textarea id="note-input-item-16692144208" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692144208', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692144208', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692144208">
+            <textarea id="note-input-loop-16692144208" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692144208', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692144208', 'item');
+        loadNote('16692144208', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Altar of Flame</h3>
+        <p><b>Duration:</b> 10m 17s</p>
+        <p><b>K/D/A:</b> 13/9/4 (K/D 1.44)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Modified B-7 Pistol, Cloudstrike</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692121054', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692121054">
+            <textarea id="note-input-item-16692121054" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692121054', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692121054', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692121054">
+            <textarea id="note-input-loop-16692121054" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692121054', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692121054', 'item');
+        loadNote('16692121054', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Fragment</h3>
+        <p><b>Duration:</b> 8m 24s</p>
+        <p><b>K/D/A:</b> 5/8/1 (K/D 0.62)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> A Sudden Death (Adept)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692094880', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692094880">
+            <textarea id="note-input-item-16692094880" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692094880', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692094880', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692094880">
+            <textarea id="note-input-loop-16692094880" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692094880', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692094880', 'item');
+        loadNote('16692094880', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — The Burnout</h3>
+        <p><b>Duration:</b> 10m 30s</p>
+        <p><b>K/D/A:</b> 16/8/5 (K/D 2.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> The Jade Rabbit, A Sudden Death (Adept)</p>
+
+        <button class="note-toggle" onclick="toggleNote('16692067862', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16692067862">
+            <textarea id="note-input-item-16692067862" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692067862', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16692067862', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16692067862">
+            <textarea id="note-input-loop-16692067862" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16692067862', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16692067862', 'item');
+        loadNote('16692067862', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-17 — Tharsis Outpost</h3>
+        <p><b>Duration:</b> 25h 37m 42s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" onclick="toggleNote('16694719973', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16694719973">
+            <textarea id="note-input-item-16694719973" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694719973', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16694719973', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16694719973">
+            <textarea id="note-input-loop-16694719973" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16694719973', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16694719973', 'item');
+        loadNote('16694719973', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-16 — Cirrus Plaza</h3>
+        <p><b>Duration:</b> 10m 56s</p>
+        <p><b>K/D/A:</b> 3/9/4 (K/D 0.33)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Memory Interdict, Khvostov 7G-0X</p>
+
+        <button class="note-toggle" onclick="toggleNote('16691449444', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16691449444">
+            <textarea id="note-input-item-16691449444" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16691449444', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16691449444', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16691449444">
+            <textarea id="note-input-loop-16691449444" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16691449444', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16691449444', 'item');
+        loadNote('16691449444', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
+        <h3>2025-12-16 — Pacifica</h3>
+        <p><b>Duration:</b> 10m 53s</p>
+        <p><b>K/D/A:</b> 3/10/3 (K/D 0.3)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Blowout, Mercurial Overreach</p>
+
+        <button class="note-toggle" onclick="toggleNote('16691415045', 'item')">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16691415045">
+            <textarea id="note-input-item-16691415045" maxlength="144"
+                placeholder="Item notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16691415045', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" onclick="toggleNote('16691415045', 'loop')">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16691415045">
+            <textarea id="note-input-loop-16691415045" maxlength="144"
+                placeholder="Gameplay loop notes (max 144 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16691415045', 'loop')">Save</button>
+            </div>
+        </div>
+
+        <script>
+        loadNote('16691415045', 'item');
+        loadNote('16691415045', 'loop');
+        </script>
+
+        <hr>
         </div>
         
 </body>
