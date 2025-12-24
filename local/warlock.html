@@ -130,6 +130,23 @@ textarea {
     width: 100%;
   }
 }
+
+.nav {
+  margin: 12px 0 18px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #33bbff;
+}
 </style>
 <script>
 function toggleNote(id, type) {
@@ -175,6 +192,10 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
 </head>
 <body>
 <h1>Warlock</h1>
+<div class="nav">
+    <a href="titan.html">Titan</a> | <a href="hunter.html">Hunter</a> | <a href="fireteam.html">Fireteam</a>
+</div>
+
 
         <div class="activity">
         <h3>2025-12-22 — Altar of Flame</h3>
@@ -549,132 +570,6 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <script>
         loadNote('16701777443', 'item');
         loadNote('16701777443', 'loop');
-        </script>
-
-        <hr>
-        </div>
-        
-        <div class="activity">
-        <h3>2025-12-17 — Distant Shore</h3>
-        <p><b>Duration:</b> 9m 42s</p>
-        <p><b>K/D/A:</b> 3/4/2 (K/D 0.75)</p>
-        <p><b>Outcome:</b> Loss</p>
-        <p><b>Weapons:</b> Relentless (Adept)</p>
-
-        <button class="note-toggle" data-id="16693843585" data-type="item">
-            Unsaved Item Data
-        </button>
-
-        <div class="note-box" id="note-box-item-16693843585">
-            <textarea id="note-input-item-16693843585" maxlength="444"
-                placeholder="Item notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693843585', 'item')">Save</button>
-            </div>
-        </div>
-
-        <button class="note-toggle" data-id="16693843585" data-type="loop">
-            Main Gameplay Loop
-        </button>
-
-        <div class="note-box" id="note-box-loop-16693843585">
-            <textarea id="note-input-loop-16693843585" maxlength="444"
-                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693843585', 'loop')">Save</button>
-            </div>
-        </div>
-
-        
-        <script>
-        loadNote('16693843585', 'item');
-        loadNote('16693843585', 'loop');
-        </script>
-
-        <hr>
-        </div>
-        
-        <div class="activity">
-        <h3>2025-12-17 — Javelin-4</h3>
-        <p><b>Duration:</b> 9m 1s</p>
-        <p><b>K/D/A:</b> 6/4/6 (K/D 1.5)</p>
-        <p><b>Outcome:</b> Win</p>
-        <p><b>Weapons:</b> Relentless (Adept), Compass Rose</p>
-
-        <button class="note-toggle" data-id="16693821077" data-type="item">
-            Unsaved Item Data
-        </button>
-
-        <div class="note-box" id="note-box-item-16693821077">
-            <textarea id="note-input-item-16693821077" maxlength="444"
-                placeholder="Item notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693821077', 'item')">Save</button>
-            </div>
-        </div>
-
-        <button class="note-toggle" data-id="16693821077" data-type="loop">
-            Main Gameplay Loop
-        </button>
-
-        <div class="note-box" id="note-box-loop-16693821077">
-            <textarea id="note-input-loop-16693821077" maxlength="444"
-                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693821077', 'loop')">Save</button>
-            </div>
-        </div>
-
-        
-        <script>
-        loadNote('16693821077', 'item');
-        loadNote('16693821077', 'loop');
-        </script>
-
-        <hr>
-        </div>
-        
-        <div class="activity">
-        <h3>2025-12-17 — The Anomaly</h3>
-        <p><b>Duration:</b> 11m 6s</p>
-        <p><b>K/D/A:</b> 29/7/5 (K/D 4.14)</p>
-        <p><b>Outcome:</b> Win</p>
-        <p><b>Weapons:</b> Compass Rose, Relentless (Adept)</p>
-
-        <button class="note-toggle" data-id="16693809924" data-type="item">
-            Unsaved Item Data
-        </button>
-
-        <div class="note-box" id="note-box-item-16693809924">
-            <textarea id="note-input-item-16693809924" maxlength="444"
-                placeholder="Item notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693809924', 'item')">Save</button>
-            </div>
-        </div>
-
-        <button class="note-toggle" data-id="16693809924" data-type="loop">
-            Main Gameplay Loop
-        </button>
-
-        <div class="note-box" id="note-box-loop-16693809924">
-            <textarea id="note-input-loop-16693809924" maxlength="444"
-                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
-
-            <div class="note-actions">
-                <button onclick="saveNote('16693809924', 'loop')">Save</button>
-            </div>
-        </div>
-
-        
-        <script>
-        loadNote('16693809924', 'item');
-        loadNote('16693809924', 'loop');
         </script>
 
         <hr>
