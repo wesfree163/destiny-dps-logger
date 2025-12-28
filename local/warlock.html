@@ -198,6 +198,48 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
 
 
         <div class="activity">
+        <h3>2025-12-28 — Warden of Nothing: Customize</h3>
+        <p><b>Duration:</b> 14m 47s</p>
+        <p><b>K/D/A:</b> 34/2/54 (K/D 17.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Volta Bracket, Warlord's Spear, Dragon's Breath</p>
+
+        <button class="note-toggle" data-id="16716584049" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16716584049">
+            <textarea id="note-input-item-16716584049" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16716584049', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16716584049" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16716584049">
+            <textarea id="note-input-loop-16716584049" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16716584049', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16716584049', 'item');
+        loadNote('16716584049', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <div class="activity">
         <h3>2025-12-26 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 19m 36s</p>
         <p><b>K/D/A:</b> 60/3/72 (K/D 20.0)</p>
