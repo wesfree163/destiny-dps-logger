@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="notes-sync.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Titan</title>
 <style>
@@ -171,6 +172,7 @@ function loadNote(id, type) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    loadAllNotes();
     document.querySelectorAll(".note-toggle").forEach(btn => {
         btn.addEventListener("click", function () {
         toggleNote(this.dataset.id, this.dataset.type);
@@ -197,6 +199,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
 </div>
 
 
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 19m 38s</p>
@@ -239,6 +255,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 8m 31s</p>
@@ -281,6 +311,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 2m 35s</p>
@@ -323,6 +367,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 1m 58s</p>
@@ -365,6 +423,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 15m 59s</p>
@@ -407,6 +479,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 4m 6s</p>
@@ -449,6 +535,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 17m 55s</p>
@@ -491,6 +591,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 17m 28s</p>
@@ -533,6 +647,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 20m 11s</p>
@@ -575,6 +703,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 8m 54s</p>
@@ -617,6 +759,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 3m 43s</p>
@@ -659,6 +815,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 19m 26s</p>
@@ -701,6 +871,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 18m 11s</p>
@@ -743,6 +927,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 12m 51s</p>
@@ -785,6 +983,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-27 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 23m 13s</p>
@@ -827,6 +1039,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-26 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 28m 33s</p>
@@ -869,6 +1095,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-26 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 6m 23s</p>
@@ -911,6 +1151,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-26 — Last Wish: Standard</h3>
         <p><b>Duration:</b> 29m 41s</p>
@@ -953,6 +1207,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 3m 20s</p>
@@ -995,6 +1263,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 22m 41s</p>
@@ -1037,6 +1319,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 16m 55s</p>
@@ -1079,6 +1375,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Solitude</h3>
         <p><b>Duration:</b> 10m 5s</p>
@@ -1121,6 +1431,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — The Citadel</h3>
         <p><b>Duration:</b> 12m 56s</p>
@@ -1163,6 +1487,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — The Anomaly</h3>
         <p><b>Duration:</b> 11m 32s</p>
@@ -1205,6 +1543,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Bannerfall</h3>
         <p><b>Duration:</b> 9m 26s</p>
@@ -1247,6 +1599,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-24 — Widow's Court</h3>
         <p><b>Duration:</b> 10m 50s</p>
@@ -1289,6 +1655,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 25m 1s</p>
@@ -1331,6 +1711,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 20m 22s</p>
@@ -1373,6 +1767,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 17m 52s</p>
@@ -1415,6 +1823,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Adamant, Europa: Smuggle: Matchmade</h3>
         <p><b>Duration:</b> 22m 48s</p>
@@ -1457,6 +1879,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Forging Matrix, Europa: Sabotage: Matchmade</h3>
         <p><b>Duration:</b> 14m 13s</p>
@@ -1499,6 +1935,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Overthrow</h3>
         <p><b>Duration:</b> 2h 44m 45s</p>
@@ -1541,6 +1991,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Pale Heart</h3>
         <p><b>Duration:</b> 2m 49s</p>
@@ -1583,6 +2047,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 9m 38s</p>
@@ -1625,6 +2103,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 8m 47s</p>
@@ -1667,6 +2159,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 9m 19s</p>
@@ -1709,6 +2215,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 8m 26s</p>
@@ -1751,6 +2271,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 10m 36s</p>
@@ -1793,6 +2327,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 9m 6s</p>
@@ -1835,6 +2383,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 9m 14s</p>
@@ -1877,6 +2439,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — The Conflux: Customize</h3>
         <p><b>Duration:</b> 3m 26s</p>
@@ -1919,6 +2495,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Typhon Imperator: Customize</h3>
         <p><b>Duration:</b> 18m 17s</p>
@@ -1961,6 +2551,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Fire and Ice: Legendary</h3>
         <p><b>Duration:</b> 1h 19m 2s</p>
@@ -2003,6 +2607,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Vox Obscura: Customize</h3>
         <p><b>Duration:</b> 12m 16s</p>
@@ -2045,6 +2663,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Tharsis Outpost</h3>
         <p><b>Duration:</b> 2h 26m 27s</p>
@@ -2087,6 +2719,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Tharsis Outpost</h3>
         <p><b>Duration:</b> 14h 1m 54s</p>
@@ -2129,6 +2775,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Forging Matrix, Europa: Smuggle: Matchmade</h3>
         <p><b>Duration:</b> 19m 51s</p>
@@ -2171,6 +2831,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Overthrow</h3>
         <p><b>Duration:</b> 4h 29m 22s</p>
@@ -2213,6 +2887,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Adamant, Europa: Smuggle: Matchmade</h3>
         <p><b>Duration:</b> 22m 38s</p>
@@ -2255,6 +2943,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-23 — Tharsis Outpost</h3>
         <p><b>Duration:</b> 3h 38m 33s</p>
@@ -2297,6 +2999,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 26m 22s</p>
@@ -2339,6 +3055,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 15m 43s</p>
@@ -2381,6 +3111,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Tharsis Outpost</h3>
         <p><b>Duration:</b> 7h 7m 22s</p>
@@ -2423,6 +3167,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 6m 2s</p>
@@ -2465,6 +3223,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 27m 15s</p>
@@ -2507,6 +3279,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 4m 8s</p>
@@ -2549,6 +3335,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 22m 22s</p>
@@ -2591,6 +3391,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 21m 21s</p>
@@ -2633,6 +3447,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 12m 40s</p>
@@ -2675,6 +3503,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — The Arms Dealer: Customize</h3>
         <p><b>Duration:</b> 52m 37s</p>
@@ -2717,6 +3559,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Encore: Customize</h3>
         <p><b>Duration:</b> 27m 12s</p>
@@ -2759,6 +3615,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Encore: Customize</h3>
         <p><b>Duration:</b> 8m 32s</p>
@@ -2801,6 +3671,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Encore: Customize</h3>
         <p><b>Duration:</b> 2m 1s</p>
@@ -2843,6 +3727,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Encore: Customize</h3>
         <p><b>Duration:</b> 4m 16s</p>
@@ -2885,6 +3783,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — HyperNet Current</h3>
         <p><b>Duration:</b> 8m 43s</p>
@@ -2927,6 +3839,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Starcrossed: Customize</h3>
         <p><b>Duration:</b> 18m 44s</p>
@@ -2969,6 +3895,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Beneath the Necropolis: Customize</h3>
         <p><b>Duration:</b> 25m 6s</p>
@@ -3011,6 +3951,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Beneath the Necropolis: Customize</h3>
         <p><b>Duration:</b> 19m 38s</p>
@@ -3053,6 +4007,20 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         <hr>
         </div>
         
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
         <div class="activity">
         <h3>2025-12-22 — Beneath the Necropolis: Customize</h3>
         <p><b>Duration:</b> 19m 58s</p>
