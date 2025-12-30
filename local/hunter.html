@@ -214,6 +214,62 @@ document.querySelectorAll(".note-actions button").forEach(btn => {
         Restore unsaved data to GitHub
         </button>
         <div class="activity">
+        <h3>2025-12-30 — Warden of Nothing: Customize</h3>
+        <p><b>Duration:</b> 15m 14s</p>
+        <p><b>K/D/A:</b> 41/2/62 (K/D 20.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Malfeasance, Cold Comfort (Adept), Optative</p>
+
+        <button class="note-toggle" data-id="16720686159" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16720686159">
+            <textarea id="note-input-item-16720686159" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16720686159', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16720686159" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16720686159">
+            <textarea id="note-input-loop-16720686159" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16720686159', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16720686159', 'item');
+        loadNote('16720686159', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
         <h3>2025-12-28 — Warden of Nothing: Customize</h3>
         <p><b>Duration:</b> 22m 31s</p>
         <p><b>K/D/A:</b> 60/9/42 (K/D 6.67)</p>
