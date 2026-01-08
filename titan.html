@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="notes-sync.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Titan</title>
+<style>
+body {
+    background:#0e0e0e;
+    color:white;
+    font-family:Arial;
+    padding:12px;
+}
+.activity {
+    background:#1c1c1c;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:12px;
+}
+h1 { color:#00aaff; }
+hr { border:1px solid #333; }
+
+.note-toggle {
+  margin-top: 8px;
+  background: #222;
+  color: #00aaff;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.note-toggle:hover {
+  background: #00aaff;
+  color: #000;
+}
+
+.note-box {
+  display: none;
+  margin-top: 8px;
+}
+
+.note-box textarea {
+  width: 100%;
+  min-height: 60px;
+  max-height: 120px;
+  resize: vertical;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.note-box {
+  display: none;
+  margin-top: 8px;
+}
+
+.note-box textarea {
+  width: 100%;
+  min-height: 80px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #333;
+  resize: vertical;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.note-actions button {
+  background: #00aaff;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-actions button:hover {
+  background: #33bbff;
+}
+
+/* Mobile touch stability */
+button, textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent zoom jump on focus */
+textarea {
+  font-size: 16px;
+}
+
+/* Larger tap targets */
+.note-toggle,
+.note-actions button {
+  min-height: 44px;
+}
+
+/* Better mobile layout */
+@media (max-width: 720px) {
+  body {
+    padding: 8px;
+  }
+
+  .activity {
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  .note-toggle {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .note-actions button {
+    width: 100%;
+  }
+}
+
+.nav {
+  margin: 12px 0 18px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #33bbff;
+}
+</style>
+<script>
+function toggleNote(id, type) {
+  const box = document.getElementById("note-box-" + type + "-" + id);
+  if (!box) return;
+  box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+
+function saveNote(id, type) {
+  const input = document.getElementById("note-input-" + type + "-" + id);
+  if (!input) return;
+  localStorage.setItem("note-" + type + "-" + id, input.value);
+  alert("Saved");
+}
+
+function loadNote(id, type) {
+  const saved = localStorage.getItem("note-" + type + "-" + id);
+  if (saved !== null) {
+    const input = document.getElementById("note-input-" + type + "-" + id);
+    if (input) input.value = saved;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadAllNotes();
+    document.querySelectorAll(".note-toggle").forEach(btn => {
+        btn.addEventListener("click", function () {
+        toggleNote(this.dataset.id, this.dataset.type);
+        });
+    });
+
+document.querySelectorAll(".note-actions button").forEach(btn => {
+    btn.addEventListener("click", function () {
+    const parent = this.closest(".note-box");
+    const id = parent.id.split("-").pop();
+    const type = parent.id.split("-")[2];
+    saveNote(id, type);
+    });
+});
+});
+</script>
+
+
+</head>
+<body>
+<h1>Titan</h1>
+<div class="nav">
+    <a href="hunter.html">Hunter</a> | <a href="warlock.html">Warlock</a> | <a href="fireteam.html">Fireteam</a>
+</div>
+
+
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — The Glassway</h3>
+        <p><b>Duration:</b> 8m 29s</p>
+        <p><b>K/D/A:</b> 40/0/8 (K/D 40)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Le Monarque, The Slammer (Adept)</p>
+
+        <button class="note-toggle" data-id="16736711781" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736711781">
+            <textarea id="note-input-item-16736711781" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736711781', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736711781" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736711781">
+            <textarea id="note-input-loop-16736711781" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736711781', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736711781', 'item');
+        loadNote('16736711781', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — The Salt Mines: Customize</h3>
+        <p><b>Duration:</b> 20m 28s</p>
+        <p><b>K/D/A:</b> 79/2/0 (K/D 39.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Le Monarque, Mint Retrograde, Terminus Horizon (Adept)</p>
+
+        <button class="note-toggle" data-id="16736704080" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736704080">
+            <textarea id="note-input-item-16736704080" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736704080', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736704080" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736704080">
+            <textarea id="note-input-loop-16736704080" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736704080', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736704080', 'item');
+        loadNote('16736704080', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Defiant Battleground: EDZ: Customize</h3>
+        <p><b>Duration:</b> 33m 19s</p>
+        <p><b>K/D/A:</b> 170/4/129 (K/D 42.5)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Le Monarque, Mint Retrograde</p>
+
+        <button class="note-toggle" data-id="16736677920" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736677920">
+            <textarea id="note-input-item-16736677920" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736677920', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736677920" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736677920">
+            <textarea id="note-input-loop-16736677920" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736677920', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736677920', 'item');
+        loadNote('16736677920', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Defiant Battleground: EDZ: Customize</h3>
+        <p><b>Duration:</b> 12m 29s</p>
+        <p><b>K/D/A:</b> 68/2/85 (K/D 34.0)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Mint Retrograde, Le Monarque, The Slammer (Adept)</p>
+
+        <button class="note-toggle" data-id="16736651202" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736651202">
+            <textarea id="note-input-item-16736651202" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736651202', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736651202" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736651202">
+            <textarea id="note-input-loop-16736651202" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736651202', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736651202', 'item');
+        loadNote('16736651202', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Expert Conquest: Sunless Cell: Customize</h3>
+        <p><b>Duration:</b> 22m 55s</p>
+        <p><b>K/D/A:</b> 181/3/48 (K/D 60.33)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> Aureus Neutralizer, Le Monarque, Mistral Lift</p>
+
+        <button class="note-toggle" data-id="16736635625" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736635625">
+            <textarea id="note-input-item-16736635625" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736635625', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736635625" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736635625">
+            <textarea id="note-input-loop-16736635625" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736635625', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736635625', 'item');
+        loadNote('16736635625', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Europa</h3>
+        <p><b>Duration:</b> 12m 5s</p>
+        <p><b>K/D/A:</b> 0/0/0 (K/D 0)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> </p>
+
+        <button class="note-toggle" data-id="16736618823" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736618823">
+            <textarea id="note-input-item-16736618823" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736618823', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736618823" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736618823">
+            <textarea id="note-input-loop-16736618823" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736618823', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736618823', 'item');
+        loadNote('16736618823', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Mission: The Invitation: Legendary</h3>
+        <p><b>Duration:</b> 26m 30s</p>
+        <p><b>K/D/A:</b> 18/0/0 (K/D 18)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Le Monarque</p>
+
+        <button class="note-toggle" data-id="16736053111" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736053111">
+            <textarea id="note-input-item-16736053111" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736053111', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736053111" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736053111">
+            <textarea id="note-input-loop-16736053111" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736053111', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736053111', 'item');
+        loadNote('16736053111', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-08 — Nightfall: Master</h3>
+        <p><b>Duration:</b> 2m 34s</p>
+        <p><b>K/D/A:</b> 7/0/0 (K/D 7)</p>
+        <p><b>Outcome:</b> Loss</p>
+        <p><b>Weapons:</b> Aureus Neutralizer</p>
+
+        <button class="note-toggle" data-id="16736020263" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16736020263">
+            <textarea id="note-input-item-16736020263" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736020263', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16736020263" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16736020263">
+            <textarea id="note-input-loop-16736020263" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16736020263', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16736020263', 'item');
+        loadNote('16736020263', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+        <button onclick="saveAllNotes()" style="
+          position:fixed;
+          bottom:18px;
+          right:18px;
+          background:#00aaff;
+          color:black;
+          border:none;
+          padding:12px 16px;
+          border-radius:10px;
+          font-weight:bold;
+          z-index:9999;
+        ">
+        Restore unsaved data to GitHub
+        </button>
+        <div class="activity">
+        <h3>2026-01-07 — Bannerfall</h3>
+        <p><b>Duration:</b> 9m 45s</p>
+        <p><b>K/D/A:</b> 3/7/2 (K/D 0.43)</p>
+        <p><b>Outcome:</b> Win</p>
+        <p><b>Weapons:</b> M-17 "Fast Talker"</p>
+
+        <button class="note-toggle" data-id="16735312836" data-type="item">
+            Unsaved Item Data
+        </button>
+
+        <div class="note-box" id="note-box-item-16735312836">
+            <textarea id="note-input-item-16735312836" maxlength="444"
+                placeholder="Item notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16735312836', 'item')">Save</button>
+            </div>
+        </div>
+
+        <button class="note-toggle" data-id="16735312836" data-type="loop">
+            Main Gameplay Loop
+        </button>
+
+        <div class="note-box" id="note-box-loop-16735312836">
+            <textarea id="note-input-loop-16735312836" maxlength="444"
+                placeholder="Gameplay loop notes (max 444 chars)"></textarea>
+
+            <div class="note-actions">
+                <button onclick="saveNote('16735312836', 'loop')">Save</button>
+            </div>
+        </div>
+
+        
+        <script>
+        loadNote('16735312836', 'item');
+        loadNote('16735312836', 'loop');
+        </script>
+
+        <hr>
+        </div>
+        
+</body>
+</html>
